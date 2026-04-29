@@ -1,4 +1,190 @@
 @use "colors";
-@use "mixins.scss";
-@use "fonts,scss";
-@use "reset.scss";
+@use "mixins";
+
+.contacts {
+  padding: 10px 15px;
+  background-color: colors.$Grey-Bg;
+  @include mixins.flex($jc: space-between, $ai: center);
+}
+.language1,
+.language2,
+.language3 {
+  padding: 5px 7px;
+  border: none;
+  background-color: colors.$Grey-Bg;
+}
+
+.language3 {
+  border-radius: 8px;
+  background: colors.$Accent;
+  color: colors.$Basic-White;
+  text-align: center;
+  font-family: "Mont Bold";
+  color: var(--Basic-White, #fff);
+  font-size: 12px;
+}
+
+.language1,
+.language2 {
+  color: colors.$Grey-Text;
+  text-align: center;
+  font-family: "Mont Bold";
+  font-size: 12px;
+}
+
+.number {
+  color: colors.$Grey-Text;
+  text-align: right;
+  font-family: "Mont Bold";
+  font-size: 16px;
+}
+
+.pinned {
+  padding: 0 15px 0 15px;
+  margin-bottom: 30px;
+  @include mixins.flex($ai: baseline, $jc: space-between);
+}
+
+.pinnedsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex($ai: start, $g: 4px);
+  color: colors.$Main-Regular;
+  font-family: "Mont Regular";
+  font-size: 20px;
+}
+
+.intro {
+  padding: 0 30px 0 30px;
+  margin-bottom: 30px;
+}
+
+.intro1 {
+  font-family: "Mont Bold";
+  font-size: 30px;
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
+}
+
+.intro2 {
+  color: colors.$Basic-Black;
+  font-family: "Mont Regular";
+  font-size: 19px;
+  line-height: 30px; /* 157.895% */
+  margin-bottom: 30px;
+}
+
+.years {
+  border-left: 4px solid colors.$Grey-Separator;
+}
+
+.years1 {
+  margin-left: 30px;
+  @include mixins.flex($ai: center, $g: 8px, $w: wrap);
+}
+
+.intro3 {
+  font-family: "Mont Bold";
+  font-size: 36px;
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro4 {
+  color: colors.$Main-Regular;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.intro5 {
+  color: colors.$Main-Regular;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.phototeams {
+  position: relative;
+}
+
+.teams {
+  position: relative;
+  width: 100%;
+}
+
+.pteams {
+  position: absolute;
+  top: 27%;
+  right: 33%;
+  color: colors.$Basic-White;
+  font-family: "Mont Bold";
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.more {
+  padding: 30px;
+}
+
+.more1 {
+  margin-bottom: 30px;
+  color: colors.$Basic-Black;
+  font-family: "Mont Regular";
+  font-size: 19px;
+}
+
+.more2 {
+  font-family: "Mont Bold";
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+
+.achievements {
+  @include mixins.flex($ai: center, $fd: column, $g: 30px);
+  padding: 30px 60px;
+  background: colors.$Grey-Bg;
+}
+
+.legal500 {
+  padding: 25px 0;
+  border-radius: 12px;
+  background: colors.$Basic-White;
+  @include mixins.flex($ai: center, $jc: center);
+  width: 100%;
+}
+
+.ellipss {
+  @include mixins.flex($g: 14px);
+}
+
+.footermobile {
+  border-top: 4px solid colors.$Grey-Separator;
+  background: colors.$Grey-Bg;
+  padding: 30px;
+  @include mixins.flex($jc: center, $fd: column, $ai: center);
+}
+
+.footermobile1,
+.footermobile2,
+.footermobile4 {
+  margin-bottom: 10px;
+}
+
+.footermobile3 {
+  margin: 10px 0;
+}
+
+.footermobile5 {
+  margin-top: 30px;
+}

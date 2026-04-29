@@ -1,11 +1,228 @@
-@font-face {
-  font-family: "Mont Bold";
-  src: url(../fonts/Montserrat-Bold.ttf);
-  src: url(../fonts/Montserrat-ExtraBold.ttf);
-  src: url(../fonts/Montserrat-SemiBold.ttf);
-  src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
+.contacts {
+  padding: 10px 15px;
+  background-color: #f5f5fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
 }
-@font-face {
+
+.language1,
+.language2,
+.language3 {
+  padding: 5px 7px;
+  border: none;
+  background-color: #f5f5fa;
+}
+
+.language3 {
+  border-radius: 8px;
+  background: #f0145a;
+  color: #fff;
+  text-align: center;
+  font-family: "Mont Bold";
+  color: var(--Basic-White, #fff);
+  font-size: 12px;
+}
+
+.language1,
+.language2 {
+  color: #b3b3ba;
+  text-align: center;
+  font-family: "Mont Bold";
+  font-size: 12px;
+}
+
+.number {
+  color: #b3b3ba;
+  text-align: right;
+  font-family: "Mont Bold";
+  font-size: 16px;
+}
+
+.pinned {
+  padding: 0 15px 0 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.pinnedsvg {
+  padding: 15px 0 10px 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+  color: #323264;
   font-family: "Mont Regular";
-  src: url(../fonts/Montserrat-Regular.ttf);
+  font-size: 20px;
+}
+
+.intro {
+  padding: 0 30px 0 30px;
+  margin-bottom: 30px;
+}
+
+.intro1 {
+  font-family: "Mont Bold";
+  font-size: 30px;
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 28px;
+}
+
+.intro2 {
+  color: rgba(0, 0, 0, 0.9450980392);
+  font-family: "Mont Regular";
+  font-size: 19px;
+  line-height: 30px; /* 157.895% */
+  margin-bottom: 30px;
+}
+
+.years {
+  border-left: 4px solid #e6e6f0;
+}
+
+.years1 {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.intro3 {
+  font-family: "Mont Bold";
+  font-size: 36px;
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro4 {
+  color: #323264;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.intro5 {
+  color: #323264;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.phototeams {
+  position: relative;
+}
+
+.teams {
+  position: relative;
+  width: 100%;
+}
+
+.pteams {
+  position: absolute;
+  top: 27%;
+  right: 33%;
+  color: #fff;
+  font-family: "Mont Bold";
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.more {
+  padding: 30px;
+}
+
+.more1 {
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.9450980392);
+  font-family: "Mont Regular";
+  font-size: 19px;
+}
+
+.more2 {
+  font-family: "Mont Bold";
+  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #f0145a;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+
+.achievements {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding: 30px 60px;
+  background: #f5f5fa;
+}
+
+.legal500 {
+  padding: 25px 0;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+}
+
+.ellipss {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 14px;
+}
+
+.footermobile {
+  border-top: 4px solid #e6e6f0;
+  background: #f5f5fa;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.footermobile1,
+.footermobile2,
+.footermobile4 {
+  margin-bottom: 10px;
+}
+
+.footermobile3 {
+  margin: 10px 0;
+}
+
+.footermobile5 {
+  margin-top: 30px;
 }/*# sourceMappingURL=style.css.map */
