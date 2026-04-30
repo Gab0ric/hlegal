@@ -110,19 +110,12 @@
   margin-bottom: 30px;
 }
 
-.phototeams {
-  position: relative;
-}
-
-.teams {
-  position: relative;
-  width: 100%;
-}
-
 .pteams {
-  position: absolute;
-  top: 27%;
-  right: 33%;
+  padding: 35px 113.5px;
+  background-image: url(../img/teams.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
   color: colors.$Basic-White;
   font-family: "Mont Bold";
   font-size: 36px;
@@ -156,6 +149,14 @@
   background: colors.$Grey-Bg;
 }
 
+.achievements {
+  color: colors.$Main-Regular;
+  text-align: center;
+  font-family: "Mont Bold";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 .legal500 {
   padding: 25px 0;
   border-radius: 12px;
@@ -181,10 +182,41 @@
   margin-bottom: 10px;
 }
 
+.footermobile1 {
+  color: colors.$Main-Regular;
+  font-family: "Mont Regular";
+  font-size: 16px;
+}
+
+.footermobile2 {
+  color: colors.$Active-Regular;
+  font-family: "Mont Bold";
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .footermobile3 {
   margin: 10px 0;
+  color: colors.$Main-Alt;
+  font-family: "Mont Bold";
+  font-size: 16px;
+}
+
+.footermobile4 {
+  color: colors.$Active-Regular;
+  font-family: "Mont Bold";
+  font-size: 16px;
 }
 
 .footermobile5 {
   margin-top: 30px;
+  color: colors.$Grey-Text;
+  text-align: center;
+  font-family: "Mont Regular";
+  font-size: 16px;
+}
+
+.menu {
+  border: none;
+  background-color: colors.$Basic-White;
 }
