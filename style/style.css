@@ -27,8 +27,7 @@
   font-size: 12px;
 }
 
-.language1,
-.language2 {
+.language1 {
   color: #b3b3ba;
   text-align: center;
   font-family: "Mont Bold";
@@ -102,30 +101,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
-}
-
-.intro3 {
-  font-family: "Mont Bold";
-  font-size: 36px;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #f0145a;
-  -webkit-text-fill-color: transparent;
-}
-
-.intro4 {
-  color: #323264;
-  font-family: "Mont Regular";
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.intro5 {
-  color: #323264;
-  font-family: "Mont Regular";
-  font-size: 16px;
-  margin-bottom: 30px;
 }
 
 .pteams {
