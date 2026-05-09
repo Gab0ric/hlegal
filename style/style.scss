@@ -6,192 +6,167 @@
   background-color: colors.$Grey-Bg;
   @include mixins.flex($jc: space-between, $ai: center);
 }
-.language1,
-.language2,
-.language3 {
-  padding: 5px 7px;
-  border: none;
-  background-color: colors.$Grey-Bg;
-}
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Grey-Bg;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
 
-.language3 {
-  border-radius: 8px;
-  background: colors.$Accent;
-  color: colors.$Basic-White;
-  text-align: center;
-  font-family: "Mont Bold";
-  color: var(--Basic-White, #fff);
-  font-size: 12px;
-}
-
-.language1 {
-  color: colors.$Grey-Text;
-  text-align: center;
-  font-family: "Mont Bold";
-  font-size: 12px;
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
 }
 
 .number {
-  color: colors.$Grey-Text;
-  text-align: right;
-  font-family: "Mont Bold";
-  font-size: 16px;
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
 }
 
-.pinned {
-  padding: 0 15px 0 15px;
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
   margin-bottom: 30px;
-  @include mixins.flex($ai: baseline, $jc: space-between);
 }
 
-.pinnedsvg {
+.text-about {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
   padding: 15px 0 10px 0;
-  @include mixins.flex($ai: start, $g: 4px);
-  color: colors.$Main-Regular;
-  font-family: "Mont Regular";
-  font-size: 20px;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Basic-White;
 }
 
 .intro {
   padding: 0 30px 0 30px;
   margin-bottom: 30px;
+
+  &__gradient {
+    font-family: "Mont Bold";
+    font-size: 30px;
+    background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #f0145a;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 28px;
+  }
+
+  &__info {
+    color: colors.$Basic-Black;
+    font-family: "Mont Regular";
+    font-size: 19px;
+    line-height: 30px; /* 157.895% */
+    margin-bottom: 30px;
+  }
+
+  &__years {
+    border-left: 4px solid colors.$Grey-Separator;
+  }
+
+  &__svg {
+    margin-left: 30px;
+    @include mixins.flex(normal, normal, column, 8px, wrap);
+  }
 }
 
-.intro1 {
-  font-family: "Mont Bold";
-  font-size: 30px;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #f0145a;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 28px;
-}
-
-.intro2 {
-  color: colors.$Basic-Black;
-  font-family: "Mont Regular";
-  font-size: 19px;
-  line-height: 30px; /* 157.895% */
-  margin-bottom: 30px;
-}
-
-.years {
-  border-left: 4px solid colors.$Grey-Separator;
-}
-
-.years1 {
-  margin-left: 30px;
-  @include mixins.flex($ai: center, $g: 8px, $w: wrap);
-}
-
-.pteams {
+.photo-teams__backgraund {
   padding: 35px 113.5px;
   background-image: url(../img/teams.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
-  color: colors.$Basic-White;
-  font-family: "Mont Bold";
-  font-size: 36px;
+  @include mixins.text-bold(36px, normal, colors.$Basic-White);
   text-transform: uppercase;
 }
 
 .more {
   padding: 30px;
-}
 
-.more1 {
-  margin-bottom: 30px;
-  color: colors.$Basic-Black;
-  font-family: "Mont Regular";
-  font-size: 19px;
-}
+  &__info {
+    color: colors.$Basic-Black;
+    @include mixins.text-regular(19px, normal, colors.$Basic-Black);
 
-.more2 {
-  font-family: "Mont Bold";
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #f0145a;
-  -webkit-text-fill-color: transparent;
-  font-size: 30px;
+    &__gradient {
+      margin-top: 30px;
+      @include mixins.text-bold(30px, normal, colors.$Gradient-Red);
+      background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: #f0145a;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
 
 .achievements {
-  @include mixins.flex($ai: center, $fd: column, $g: 30px);
+  @include mixins.flex(center, center, column, 30px);
   padding: 30px 60px;
   background: colors.$Grey-Bg;
+
+  &__text {
+    @include mixins.text-bold(14px, normal, colors.$Main-Regular);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    padding: 25px 70px;
+    border-radius: 12px;
+    background: colors.$Basic-White;
+  }
+
+  &__circle {
+    @include mixins.flex(normal, normal, row, 14px);
+  }
 }
 
-.achievements {
-  color: colors.$Main-Regular;
-  text-align: center;
-  font-family: "Mont Bold";
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.legal500 {
-  padding: 25px 0;
-  border-radius: 12px;
-  background: colors.$Basic-White;
-  @include mixins.flex($ai: center, $jc: center);
-  width: 100%;
-}
-
-.ellipss {
-  @include mixins.flex($g: 14px);
-}
-
-.footermobile {
-  border-top: 4px solid colors.$Grey-Separator;
-  background: colors.$Grey-Bg;
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Grey-Bg;
   padding: 30px;
-  @include mixins.flex($jc: center, $fd: column, $ai: center);
-}
+  border-top: 2px solid colors.$Grey-Separator;
 
-.footermobile1,
-.footermobile2,
-.footermobile4 {
-  margin-bottom: 10px;
-}
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
 
-.footermobile1 {
-  color: colors.$Main-Regular;
-  font-family: "Mont Regular";
-  font-size: 16px;
-}
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
 
-.footermobile2 {
-  color: colors.$Active-Regular;
-  font-family: "Mont Bold";
-  font-size: 12px;
-  text-transform: uppercase;
-}
+  &__facebook {
+    background-color: colors.$Grey-Bg;
+    padding-bottom: 10px;
+    border: none;
+  }
 
-.footermobile3 {
-  margin: 10px 0;
-  color: colors.$Main-Alt;
-  font-family: "Mont Bold";
-  font-size: 16px;
-}
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
 
-.footermobile4 {
-  color: colors.$Active-Regular;
-  font-family: "Mont Bold";
-  font-size: 16px;
-}
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
 
-.footermobile5 {
-  margin-top: 30px;
-  color: colors.$Grey-Text;
-  text-align: center;
-  font-family: "Mont Regular";
-  font-size: 16px;
-}
-
-.menu {
-  border: none;
-  background-color: colors.$Basic-White;
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
 }

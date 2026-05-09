@@ -1,0 +1,164 @@
+@use "colors";
+@use "mixins";
+
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Grey-Bg;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
+}
+
+.number {
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
+  margin-bottom: 30px;
+}
+
+.contacts {
+  padding: 10px 15px;
+  @include mixins.flex(normal, space-between);
+  background-color: colors.$Grey-Bg;
+}
+
+.text-team {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Basic-White;
+}
+
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Grey-Bg;
+  padding: 30px;
+  border-top: 4px solid colors.$Grey-Separator;
+
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  &__facebook {
+    background-color: colors.$Grey-Bg;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}
+
+.publications {
+  padding: 30px;
+  background-color: colors.$Grey-Bg;
+  @include mixins.flex(normal, normal, column);
+
+  &__btn {
+    @include mixins.text-bold(16px, normal, colors.$Basic-White);
+    background: var(--Active-Regular, #24a3ff);
+    box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    padding: 18px 30px;
+    margin-top: 30px;
+    border: none;
+  }
+
+  &__image {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  &__Equity-associate {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: colors.$Basic-White;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__last-card {
+    border-radius: 12px;
+    padding: 30px;
+    background-color: colors.$Basic-White;
+  }
+
+  &__text {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+    padding-bottom: 15px;
+    border-bottom: 4px solid colors.$Grey-Separator;
+  }
+
+  &__info {
+    @include mixins.text-regular(14px, 22px, colors.$Basic-Black);
+    padding-top: 15px;
+  }
+}
+
+.swapbox {
+  padding: 2px;
+  background-color: colors.$Grey-Separator;
+  border-radius: 10px;
+  @include mixins.flex(normal, center, row, 2px);
+  margin-bottom: 30px;
+
+  &__btn {
+    padding: 8px 50px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    @include mixins.text-bold(16px, normal, colors.$Main-Regular);
+    transition: 0.5s;
+
+    &:hover {
+      background-color: colors.$Grey-Bg;
+    }
+  }
+
+  &__btn--active {
+    background-color: colors.$Basic-White;
+  }
+}

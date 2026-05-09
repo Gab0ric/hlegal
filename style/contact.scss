@@ -1,0 +1,185 @@
+@use "colors";
+@use "mixins";
+
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Grey-Bg;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
+}
+
+.number {
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
+  margin-bottom: 30px;
+}
+
+.contacts {
+  padding: 10px 15px;
+  @include mixins.flex(normal, space-between);
+  background-color: colors.$Grey-Bg;
+}
+
+.text-team {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Basic-White;
+}
+
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Grey-Bg;
+  padding: 30px;
+  margin-top: 30px;
+
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  &__facebook {
+    background-color: colors.$Grey-Bg;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}
+
+.contact-us {
+  padding: 0 30px;
+
+  &__street {
+    @include mixins.text-regular(21px, 30px, colors.$Main-Regular);
+    margin-bottom: 30px;
+  }
+
+  &__phone {
+    border-top: 4px solid colors.$Grey-Separator;
+    @include mixins.text-regular(21px, 20px, colors.$Main-Regular);
+    margin-bottom: 15px;
+    padding-top: 30px;
+  }
+
+  &__email {
+    border-bottom: 4px solid colors.$Grey-Separator;
+    @include mixins.text-regular(21px, 30px, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__facebook {
+    padding: 30px 0;
+    @include mixins.flex(normal, normal, row, 10px, nowrap);
+    border: none;
+    background-color: colors.$Basic-White;
+    @include mixins.text-bold(12px, 16px, colors.$Active-Regular);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.support {
+  @include mixins.flex(center, center, column);
+  padding: 30px;
+  background-color: colors.$Grey-Bg;
+  border-radius: 12px;
+
+  &__text {
+    @include mixins.text-bold(27px, normal, b);
+    background: var(
+      --Gradient-Red-Text,
+      linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    padding: 15px;
+    @include mixins.flex(start, normal);
+    align-self: stretch;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+
+    &::placeholder {
+      @include mixins.text-regular(16px, 26px, colors.$Grey-Text);
+    }
+  }
+
+  &__message {
+    align-self: stretch;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: 130px;
+
+    &::placeholder {
+      @include mixins.text-regular(16px, 26px, colors.$Grey-Text);
+    }
+  }
+
+  &__answer {
+    margin-bottom: 15px;
+    @include mixins.text-bold(14px, normal, colors.$Grey-Text);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    @include mixins.flex(start, center);
+    @include mixins.text-bold(16px, normal, colors.$Basic-White);
+    padding: 18px 30px;
+    align-self: stretch;
+    border: none;
+    border-radius: 12px;
+    background: var(--Active-Regular, #24a3ff);
+    box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+    margin-top: 30px;
+  }
+}

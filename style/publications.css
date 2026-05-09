@@ -1,0 +1,219 @@
+.language__btn {
+  border: none;
+  background-color: #f5f5fa;
+  padding: 7px;
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+.language__btn--active {
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  background: #f0145a;
+  border: none;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-bottom: 30px;
+}
+
+.contacts {
+  padding: 10px 15px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #f5f5fa;
+}
+
+.text-team {
+  font-family: "Mont Bold";
+  font-size: 20px;
+  line-height: normal;
+  color: #323264;
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  display: flex;
+  align-items: start;
+  justify-content: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: #fff;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #f5f5fa;
+  padding: 30px;
+  border-top: 4px solid #e6e6f0;
+}
+.information__street {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #323264;
+  padding-bottom: 10px;
+}
+.information__map {
+  font-family: " Mont Regular";
+  font-size: 12px;
+  line-height: normal;
+  color: #24a3ff;
+  padding-bottom: 21px;
+  text-transform: uppercase;
+}
+.information__facebook {
+  background-color: #f5f5fa;
+  padding-bottom: 10px;
+  border: none;
+}
+.information__phone {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #46466e;
+  padding-bottom: 10px;
+}
+.information__email {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  padding-bottom: 30px;
+}
+.information__hlegal {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+
+.publications {
+  padding: 30px;
+  background-color: #f5f5fa;
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.publications__btn {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #fff;
+  background: var(--Active-Regular, #24a3ff);
+  box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  padding: 18px 30px;
+  margin-top: 30px;
+  border: none;
+}
+.publications__image {
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.publications__Equity-associate {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+.publications__last-card {
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+}
+.publications__text {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  margin-bottom: 15px;
+}
+.publications__date {
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #b3b3ba;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #e6e6f0;
+}
+.publications__info {
+  font-family: " Mont Regular";
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.9450980392);
+  padding-top: 15px;
+}
+
+.swapbox {
+  padding: 2px;
+  background-color: #e6e6f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2px;
+  margin-bottom: 30px;
+}
+.swapbox__btn {
+  padding: 8px 50px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #323264;
+  transition: 0.5s;
+}
+.swapbox__btn:hover {
+  background-color: #f5f5fa;
+}
+.swapbox__btn--active {
+  background-color: #fff;
+}/*# sourceMappingURL=publications.css.map */

@@ -1,0 +1,191 @@
+@use "colors";
+@use "mixins";
+
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Main-Alt;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
+}
+
+.number {
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
+  background-color: colors.$Main-Regular;
+}
+
+.contacts {
+  padding: 10px 15px;
+  @include mixins.flex(normal, space-between);
+  background: colors.$Main-Alt;
+}
+
+.text-team {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Main-Regular;
+}
+
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Basic-White;
+  padding: 30px;
+
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  &__facebook {
+    background-color: colors.$Basic-White;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}
+
+.servises-cards {
+  @include mixins.flex(normal, normal, column, 30px);
+  background: var(
+    --Gradient-Supersoft,
+    linear-gradient(263deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+  );
+  padding: 30px 30px 60px 30px;
+  border-radius: 0 0 12px 12px;
+
+  &__header {
+    @include mixins.text-bold(30px, normal, b);
+    background: var(
+      --Gradient-Red-Text,
+      linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__svg {
+    padding: 14px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    background-color: colors.$Basic-White;
+  }
+
+  &__text-regular {
+    @include mixins.text-bold(22px, normal, colors.$Active-Regular);
+    margin-bottom: 15px;
+  }
+
+  &__text-basic {
+    @include mixins.text-regular(16px, 26px, colors.$Basic-White);
+  }
+}
+
+.border-radius {
+  @include mixins.flex(center, center, column);
+
+  &__dark {
+    margin: 0 20px;
+    width: 295px;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background: #cacadb;
+  }
+
+  &__light {
+    margin: 0 20px;
+    width: 265px;
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background: #e7e7f2;
+  }
+}
+
+.clients {
+  @include mixins.flex(center, center, column);
+  margin: 30px 0 30px 0;
+
+  &__text {
+    @include mixins.text-bold(14px, normal, colors.$Main-Regular);
+    margin-bottom: 30px;
+  }
+
+  &__hillel {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: #1c4280;
+  }
+
+  &__wannabiz {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: #143646;
+  }
+
+  &__tapgerine {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: linear-gradient(0deg, #f48b30 0%, #f48b30 100%), #f48b30;
+  }
+
+  &__3dlook {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: #9e4dc3;
+  }
+
+  &__arangear {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: #fd9339;
+  }
+
+  &__adtelligent {
+    max-width: 100%;
+    padding: 39px 90px;
+    background: #e2e2e4;
+  }
+}

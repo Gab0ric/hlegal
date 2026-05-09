@@ -1,14 +1,3 @@
-.contacts {
-  padding: 10px 15px;
-  background-color: #f5f5fa;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0;
-}
-
 .language__btn {
   border: none;
   background-color: #f5f5fa;
@@ -53,7 +42,18 @@
   margin-bottom: 30px;
 }
 
-.text-about {
+.contacts {
+  padding: 10px 15px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #f5f5fa;
+}
+
+.text-team {
   font-family: "Mont Bold";
   font-size: 20px;
   line-height: normal;
@@ -76,106 +76,81 @@
   background-color: #fff;
 }
 
-.intro {
-  padding: 0 30px 0 30px;
+.content {
+  padding: 0 30px;
+}
+.content__card {
   margin-bottom: 30px;
 }
-.intro__gradient {
-  font-family: "Mont Bold";
-  font-size: 30px;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #f0145a;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 28px;
-}
-.intro__info {
-  color: rgba(0, 0, 0, 0.9450980392);
-  font-family: "Mont Regular";
-  font-size: 19px;
-  line-height: 30px; /* 157.895% */
+.content__image {
+  max-width: 100%;
+  border-radius: 12px;
   margin-bottom: 30px;
 }
-.intro__years {
-  border-left: 4px solid #e6e6f0;
-}
-.intro__svg {
-  margin-left: 30px;
-  display: flex;
-  align-items: normal;
-  justify-content: normal;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.photo-teams__backgraund {
-  padding: 35px 113.5px;
-  background-image: url(../img/teams.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 100%;
+.content__name {
   font-family: "Mont Bold";
-  font-size: 36px;
+  font-size: 33px;
   line-height: normal;
-  color: #fff;
-  text-transform: uppercase;
+  color: b;
+  background: var(--Gradient-Red-Text, linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 10px;
 }
-
-.more {
-  padding: 30px;
-}
-.more__info {
-  color: rgba(0, 0, 0, 0.9450980392);
+.content__role {
   font-family: " Mont Regular";
-  font-size: 19px;
-  line-height: normal;
-  color: rgba(0, 0, 0, 0.9450980392);
+  font-size: 14px;
+  line-height: 22px;
+  color: #b3b3ba;
+  padding-bottom: 10px;
 }
-.more__info__gradient {
-  margin-top: 30px;
-  font-family: "Mont Bold";
-  font-size: 30px;
+.content__email {
+  font-family: " Mont Regular";
+  font-size: 16px;
   line-height: normal;
-  color: 323deg, #f0145a 6.7%, #693264 70.36%;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #24a3ff;
+  padding-bottom: 10px;
+}
+.content__link {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+}
+.content__link:hover {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
   color: #f0145a;
-  -webkit-text-fill-color: transparent;
 }
 
-.achievements {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 30px;
-  padding: 30px 60px;
-  background: #f5f5fa;
+.content-text {
+  border-top: 4px solid #e6e6f0;
 }
-.achievements__text {
+.content-text__about {
+  margin: 30px 0;
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.9450980392);
+}
+.content-text__education {
+  margin-bottom: 15px;
   font-family: "Mont Bold";
   font-size: 14px;
   line-height: normal;
   color: #323264;
-  text-align: center;
-  text-transform: uppercase;
 }
-.achievements__image {
-  padding: 25px 70px;
-  border-radius: 12px;
-  background: #fff;
+.content-text__university {
+  margin-bottom: 30px;
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.9450980392);
 }
-.achievements__circle {
-  display: flex;
-  align-items: normal;
-  justify-content: normal;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 14px;
+.content-text__experience {
+  margin-bottom: 30px;
 }
 
 .information {
@@ -187,7 +162,6 @@
   gap: 0;
   background-color: #f5f5fa;
   padding: 30px;
-  border-top: 2px solid #e6e6f0;
 }
 .information__street {
   font-family: " Mont Regular";
@@ -228,4 +202,4 @@
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=team-entry.css.map */

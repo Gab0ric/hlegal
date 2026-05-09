@@ -1,0 +1,239 @@
+.language__btn {
+  border: none;
+  background-color: #46466e;
+  padding: 7px;
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+.language__btn--active {
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  background: #f0145a;
+  border: none;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #323264;
+}
+
+.contacts {
+  padding: 10px 15px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background: #46466e;
+}
+
+.text-team {
+  font-family: "Mont Bold";
+  font-size: 20px;
+  line-height: normal;
+  color: #323264;
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  display: flex;
+  align-items: start;
+  justify-content: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: #323264;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  background-color: #fff;
+  padding: 30px;
+}
+.information__street {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #323264;
+  padding-bottom: 10px;
+}
+.information__map {
+  font-family: " Mont Regular";
+  font-size: 12px;
+  line-height: normal;
+  color: #24a3ff;
+  padding-bottom: 21px;
+  text-transform: uppercase;
+}
+.information__facebook {
+  background-color: #fff;
+  padding-bottom: 10px;
+  border: none;
+}
+.information__phone {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #46466e;
+  padding-bottom: 10px;
+}
+.information__email {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  padding-bottom: 30px;
+}
+.information__hlegal {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+
+.servises-cards {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 30px;
+  background: var(--Gradient-Supersoft, linear-gradient(263deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%));
+  padding: 30px 30px 60px 30px;
+  border-radius: 0 0 12px 12px;
+}
+.servises-cards__header {
+  font-family: "Mont Bold";
+  font-size: 30px;
+  line-height: normal;
+  color: b;
+  background: var(--Gradient-Red-Text, linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.servises-cards__svg {
+  padding: 14px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.servises-cards__text-regular {
+  font-family: "Mont Bold";
+  font-size: 22px;
+  line-height: normal;
+  color: #24a3ff;
+  margin-bottom: 15px;
+}
+.servises-cards__text-basic {
+  font-family: " Mont Regular";
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+}
+
+.border-radius {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.border-radius__dark {
+  margin: 0 20px;
+  width: 295px;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background: #cacadb;
+}
+.border-radius__light {
+  margin: 0 20px;
+  width: 265px;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background: #e7e7f2;
+}
+
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin: 30px 0 30px 0;
+}
+.clients__text {
+  font-family: "Mont Bold";
+  font-size: 14px;
+  line-height: normal;
+  color: #323264;
+  margin-bottom: 30px;
+}
+.clients__hillel {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: #1c4280;
+}
+.clients__wannabiz {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: #143646;
+}
+.clients__tapgerine {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: linear-gradient(0deg, #f48b30 0%, #f48b30 100%), #f48b30;
+}
+.clients__3dlook {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: #9e4dc3;
+}
+.clients__arangear {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: #fd9339;
+}
+.clients__adtelligent {
+  max-width: 100%;
+  padding: 39px 90px;
+  background: #e2e2e4;
+}/*# sourceMappingURL=servises.css.map */

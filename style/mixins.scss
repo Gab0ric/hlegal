@@ -1,4 +1,4 @@
-@mixin flex($ai: start, $jc: start, $fd: row, $g: 0, $w: nowrap) {
+@mixin flex($ai: normal, $jc: normal, $fd: row, $g: 0, $w: nowrap) {
   display: flex;
   align-items: $ai;
   justify-content: $jc;
@@ -7,4 +7,30 @@
   gap: $g;
 }
 
+@mixin text-regular($size, $lh, $color) {
+  font-family: " Mont Regular";
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}
 
+@mixin text-medium($size, $lh, $color) {
+  font-family: "Mont Medium";
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin text-bold($size, $lh, $color) {
+  font-family: "Mont Bold";
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin text-black($size, $lh, $color) {
+  font-family: "Mont Black";
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+}

@@ -1,0 +1,155 @@
+@use "colors";
+@use "mixins";
+
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Grey-Bg;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
+}
+
+.number {
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
+  margin-bottom: 30px;
+}
+
+.contacts {
+  padding: 10px 15px;
+  @include mixins.flex(normal, space-between);
+  background-color: colors.$Grey-Bg;
+}
+
+.text-team {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Basic-White;
+}
+
+.content {
+  padding: 0 30px;
+
+  &__card {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    @include mixins.text-bold(33px, normal, b);
+    background: var(
+      --Gradient-Red-Text,
+      linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+  }
+
+  &__role {
+    @include mixins.text-regular(14px, 22px, colors.$Grey-Text);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-regular(16px, normal, colors.$Active-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__link {
+    @include mixins.text-regular(16px, normal, colors.$Active-Regular);
+
+    &:hover {
+      @include mixins.text-regular(16px, normal, colors.$Accent);
+    }
+  }
+}
+
+.content-text {
+  border-top: 4px solid colors.$Grey-Separator;
+
+  &__about {
+    margin: 30px 0;
+    @include mixins.text-regular(16px, 26px, colors.$Basic-Black);
+  }
+
+  &__education {
+    margin-bottom: 15px;
+    @include mixins.text-bold(14px, normal, colors.$Main-Regular);
+  }
+
+  &__university {
+    margin-bottom: 30px;
+    @include mixins.text-regular(16px, 26px, colors.$Basic-Black);
+  }
+
+  &__experience {
+    margin-bottom: 30px;
+  }
+}
+
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Grey-Bg;
+  padding: 30px;
+
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  &__facebook {
+    background-color: colors.$Grey-Bg;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}

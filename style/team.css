@@ -1,12 +1,12 @@
 .contacts {
   padding: 10px 15px;
-  background-color: #f5f5fa;
   display: flex;
-  align-items: center;
+  align-items: normal;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
+  background-color: #f5f5fa;
 }
 
 .language__btn {
@@ -53,7 +53,7 @@
   margin-bottom: 30px;
 }
 
-.text-about {
+.text-team {
   font-family: "Mont Bold";
   font-size: 20px;
   line-height: normal;
@@ -76,106 +76,68 @@
   background-color: #fff;
 }
 
-.intro {
-  padding: 0 30px 0 30px;
+.responsibility {
+  padding: 0 30px;
   margin-bottom: 30px;
 }
-.intro__gradient {
-  font-family: "Mont Bold";
-  font-size: 30px;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #f0145a;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 28px;
-}
-.intro__info {
-  color: rgba(0, 0, 0, 0.9450980392);
-  font-family: "Mont Regular";
-  font-size: 19px;
-  line-height: 30px; /* 157.895% */
-  margin-bottom: 30px;
-}
-.intro__years {
-  border-left: 4px solid #e6e6f0;
-}
-.intro__svg {
-  margin-left: 30px;
-  display: flex;
-  align-items: normal;
-  justify-content: normal;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 
-.photo-teams__backgraund {
-  padding: 35px 113.5px;
-  background-image: url(../img/teams.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-family: "Mont Bold";
-  font-size: 36px;
-  line-height: normal;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.more {
-  padding: 30px;
-}
-.more__info {
-  color: rgba(0, 0, 0, 0.9450980392);
-  font-family: " Mont Regular";
-  font-size: 19px;
-  line-height: normal;
-  color: rgba(0, 0, 0, 0.9450980392);
-}
-.more__info__gradient {
-  margin-top: 30px;
+.gradient {
   font-family: "Mont Bold";
   font-size: 30px;
   line-height: normal;
-  color: 323deg, #f0145a 6.7%, #693264 70.36%;
-  background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
-  -webkit-background-clip: text;
+  color: b;
+  background: var(--Gradient-Red-Text, linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%));
   background-clip: text;
-  color: #f0145a;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.achievements {
+.team-info {
+  padding: 0 30px;
+}
+
+.team-card__more {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 30px;
-  padding: 30px 60px;
-  background: #f5f5fa;
-}
-.achievements__text {
-  font-family: "Mont Bold";
-  font-size: 14px;
-  line-height: normal;
-  color: #323264;
-  text-align: center;
-  text-transform: uppercase;
-}
-.achievements__image {
-  padding: 25px 70px;
-  border-radius: 12px;
-  background: #fff;
-}
-.achievements__circle {
-  display: flex;
-  align-items: normal;
+  align-items: start;
   justify-content: normal;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 14px;
+  gap: 0;
+  border: none;
+  background-color: #fff;
+  max-width: 32px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.team-card__more:hover {
+  transform: rotate(0deg);
+}
+
+.team-card__image {
+  max-width: 260px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.team-card__content {
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-bottom: 30px;
+}
+.team-card__name {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #323264;
+}
+.team-card__role {
+  font-family: " Mont Regular";
+  font-size: 14px;
+  line-height: 22px;
+  color: #b3b3ba;
 }
 
 .information {
@@ -187,7 +149,6 @@
   gap: 0;
   background-color: #f5f5fa;
   padding: 30px;
-  border-top: 2px solid #e6e6f0;
 }
 .information__street {
   font-family: " Mont Regular";
@@ -228,4 +189,4 @@
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=team.css.map */

@@ -1,0 +1,142 @@
+@use "colors";
+@use "mixins";
+
+.contacts {
+  padding: 10px 15px;
+  @include mixins.flex(normal, space-between);
+  background-color: colors.$Grey-Bg;
+}
+
+.language {
+  &__btn {
+    border: none;
+    background-color: colors.$Grey-Bg;
+    padding: 7px;
+    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &--active {
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+      padding: 6px;
+      border-radius: 8px;
+      background: colors.$Accent;
+      border: none;
+    }
+  }
+}
+
+.number {
+  @include mixins.flex(center, normal);
+  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+}
+
+.burger-menu_hlegal {
+  padding: 0 15px;
+  @include mixins.flex(center, space-between);
+  margin-bottom: 30px;
+}
+
+.text-team {
+  @include mixins.text-bold(20px, normal, colors.$Main-Regular);
+}
+
+.hlegalsvg {
+  padding: 15px 0 10px 0;
+  @include mixins.flex(start, normal, row, 4px);
+}
+
+.menu {
+  border: none;
+  padding: 10px 7px;
+  background-color: colors.$Basic-White;
+}
+
+.responsibility {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+.gradient {
+  @include mixins.text-bold(30px, normal, b);
+  background: var(
+    --Gradient-Red-Text,
+    linear-gradient(90deg, #f0145a 0.84%, #ef8080 99.96%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-info {
+  padding: 0 30px;
+}
+
+.team-card__more {
+  @include mixins.flex(start, normal);
+  border: none;
+  background-color: colors.$Basic-White;
+  max-width: 32px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+
+  &:hover {
+    transform: rotate(0deg);
+  }
+}
+
+.team-card {
+  &__image {
+    max-width: 260px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    @include mixins.flex(normal, space-between);
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    @include mixins.text-bold(16px, normal, colors.$Main-Regular);
+  }
+
+  &__role {
+    @include mixins.text-regular(14px, 22px, colors.$Grey-Text);
+  }
+}
+
+.information {
+  @include mixins.flex(center, center, column);
+  background-color: colors.$Grey-Bg;
+  padding: 30px;
+
+  &__street {
+    @include mixins.text-regular(16px, normal, colors.$Main-Regular);
+    padding-bottom: 10px;
+  }
+
+  &__map {
+    @include mixins.text-regular(12px, normal, colors.$Active-Regular);
+    padding-bottom: 21px;
+    text-transform: uppercase;
+  }
+
+  &__facebook {
+    background-color: colors.$Grey-Bg;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  &__phone {
+    @include mixins.text-bold(16px, normal, colors.$Main-Alt);
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    padding-bottom: 30px;
+  }
+
+  &__hlegal {
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}
