@@ -186,6 +186,11 @@
   padding-top: 30px;
   padding: 30px;
 
+  &__footer {
+    @include mixins.flex(center, normal, column, 6px);
+    margin-bottom: 20px;
+  }
+
   &__street {
     @include mixins.text-regular(16px, normal, colors.$Main-Regular);
   }

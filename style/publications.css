@@ -242,6 +242,15 @@
   padding-top: 30px;
   padding: 30px;
 }
+.information__footer {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
 .information__street {
   font-family: "Mont Regular";
   font-size: 16px;
