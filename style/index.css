@@ -245,7 +245,7 @@
 }
 .position-content__btn {
   border: none;
-  background-color: #323264;
+  background-color: transparent;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -255,6 +255,7 @@
 }
 .scrollhover:hover {
   transform: scale(1.1);
+  background-color: transparent;
   content: url("../img/pyk.svg");
 }
 
@@ -873,6 +874,20 @@
   .publications__text-gradient {
     max-width: 77%;
   }
+  .border-radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .border-radius__dark {
+    width: 335px;
+  }
+  .border-radius__light {
+    width: 295px;
+  }
 }
 @media screen and (min-width: 425px) {
   .background-container {
@@ -881,6 +896,20 @@
     background-repeat: no-repeat;
     background-size: 595px;
     background-position: -60px 0px;
+  }
+  .border-radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .border-radius__dark {
+    width: 375px;
+  }
+  .border-radius__light {
+    width: 335px;
   }
   .publications__text-gradient {
     max-width: 69%;

@@ -379,6 +379,14 @@
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0;
+  transition: 0.3s;
+}
+
+.inside:hover {
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: 16px;
+  color: #f0145a;
 }
 
 .support {

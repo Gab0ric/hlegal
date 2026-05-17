@@ -195,7 +195,7 @@
 
   &__btn {
     border: none;
-    background-color: colors.$Main-Regular;
+    background-color: transparent;
     transition: 0.3s;
     cursor: pointer;
   }
@@ -206,6 +206,7 @@
 
   &:hover {
     transform: scale(1.1);
+    background-color: transparent;
     content: url("../img/pyk.svg");
   }
 }
@@ -714,6 +715,18 @@
   .publications__text-gradient {
     max-width: 77%;
   }
+
+  .border-radius {
+    @include mixins.flex(center, center, column);
+
+    &__dark {
+      width: 335px;
+    }
+
+    &__light {
+      width: 295px;
+    }
+  }
 }
 
 @media screen and (min-width: 425px) {
@@ -723,6 +736,18 @@
     background-repeat: no-repeat;
     background-size: 595px;
     background-position: -60px 0px;
+  }
+
+  .border-radius {
+    @include mixins.flex(center, center, column);
+
+    &__dark {
+      width: 375px;
+    }
+
+    &__light {
+      width: 335px;
+    }
   }
 
   .publications__text-gradient {

@@ -283,6 +283,11 @@
 
 .inside {
   @include mixins.flex(normal, normal, column);
+  transition: 0.3s;
+}
+
+.inside:hover {
+  @include mixins.text-bold(12px, 16px, colors.$Accent);
 }
 
 .support {
