@@ -776,6 +776,14 @@
     flex-wrap: nowrap;
     gap: 0;
   }
+  .burger-menu_hlegal__buttons {
+    display: flex;
+    align-items: normal;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
 }
 @media screen and (min-width: 768px) and (min-width: 1440px) {
   .clients__logos {

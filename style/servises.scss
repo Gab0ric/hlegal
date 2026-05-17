@@ -411,7 +411,6 @@
     background-color: colors.$Main-Regular;
   }
 
-
   .contacts {
     @include mixins.flex(center, normal, row, 6px);
     background-color: colors.$Main-Regular;
@@ -643,6 +642,10 @@
     }
     .information {
       @include mixins.flex(start, space-between, row);
+    }
+
+    .burger-menu_hlegal__buttons {
+      @include mixins.flex(normal, end, row, 15px);
     }
   }
 
