@@ -9,103 +9,203 @@
     <title>Homepage</title>
   </head>
   <body>
-    <header class="container">
-      <div class="contacts">
-        <div>
-          <button class="language__btn">УК</button>
-          <button class="language__btn">РУ</button>
-          <button class="language__btn language__btn--active">EN</button>
+    <div class="background-container">
+      <header class="container">
+        <div class="mobile-sml">
+          <div class="contacts">
+            <div>
+              <button class="language__btn">УК</button>
+              <button class="language__btn">РУ</button>
+              <button class="language__btn language__btn--active">EN</button>
+            </div>
+            <img class="contacts__dot" src="../img/Dot separator.svg" />
+            <p class="contacts__street">Kyiv, Mechnikova str., 14/1</p>
+            <img class="contacts__dot" src="../img/Dot separator.svg" />
+            <span class="number">0800 211 927</span>
+            <img class="contacts__facobook-hover" src="../img/facewhite.svg" />
+          </div>
+          <div class="burger-menu_hlegal">
+            <div class="hlegalsvg">
+              <a href="../html/index.html"
+                ><button class="a-logo">
+                  <img class="logologo" src="../img/logo.svg" /></button
+              ></a>
+            </div>
+            <div class="burger-menu_hlegal__buttons">
+              <a href="../html/about.html">
+                <button class="burger-menu_hlegal__btn">about us</button>
+              </a>
+              <a href="../html/services.html"
+                ><button class="burger-menu_hlegal__btn">services</button></a
+              >
+              <a href="../html/team.html"
+                ><button class="burger-menu_hlegal__btn">team</button></a
+              >
+              <a href="../html/publications.html">
+                <button class="burger-menu_hlegal__btn">publications</button></a
+              >
+              <a href="../html/contact.html"
+                ><button class="burger-menu_hlegal__btn">contact</button></a
+              >
+            </div>
+            <button class="menu" id="burger">
+              <img src="../img/Hamburger.svg" class="hamburg" />
+            </button>
+
+            <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+              <div class="menu-card">
+                <button class="menu-close" id="menuClose">×</button>
+
+                <ul class="menu-links">
+                  <li><a href="../html/about.html">about us</a></li>
+
+                  <li>
+                    <a href="../html/services.html" class="active">services</a>
+                  </li>
+
+                  <li><a href="../html/team.html">team</a></li>
+
+                  <li>
+                    <a href="../html/publications.html"> publications </a>
+                  </li>
+
+                  <li><a href="../html/contact.html">contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        <span class="number">0800 211 927</span>
-      </div>
-      <div class="burger-menu_hlegal">
-        <div class="hlegalsvg">
-          <img src="../img/Logo.svg" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="26"
-            viewBox="0 0 12 26"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M8.39478 0H11.617L3.22224 26H0L8.39478 0Z"
-              fill="#F0145A"
-            />
-          </svg>
-          <span class="text-team">team</span>
+        <div class="tablet-hd">
+          <div class="hlegalsvg">
+            <a href="../html/index.html" class="a-logo"
+              ><button class="a-logo">
+                <img class="logologo" src="../img/logo.svg" /></button
+            ></a>
+          </div>
+          <div>
+            <div>
+              <div class="tablet-hd__btn">
+                <button class="language__btn">УК</button>
+                <button class="language__btn">РУ</button>
+                <button class="language__btn language__btn--active">EN</button>
+                <img class="contacts__dot" src="../img/Dot separator.svg" />
+                <p class="contacts__street">Kyiv, Mechnikova str., 14/1</p>
+                <img class="contacts__dot" src="../img/Dot separator.svg" />
+                <span class="number">0800 211 927</span>
+                <img class="contacts__dot" src="../img/Facebook-Header.svg" />
+              </div>
+            </div>
+            <div class="burger-menu_hlegal__buttons">
+              <a href="../html/about.html">
+                <button class="burger-menu_hlegal__btn">about us</button>
+              </a>
+              <a href="../html/services.html"
+                ><button class="burger-menu_hlegal__btn">services</button></a
+              >
+              <a href="../html/team.html"
+                ><button class="burger-menu_hlegal__btn">team</button></a
+              >
+              <a href="../html/publications.html">
+                <button class="burger-menu_hlegal__btn">publications</button></a
+              >
+              <a href="../html/contact.html"
+                ><button class="burger-menu_hlegal__btn">contact</button></a
+              >
+            </div>
+          </div>
         </div>
-        <button class="menu">
-          <img src="../img/Hamburger.svg" />
+      </header>
+      <div class="position-content">
+        <p class="position-content__text">you legal solutions provider</p>
+        <button class="position-content__btn">
+          <img src="../img/Scroll.svg" class="scrollhover" />
         </button>
       </div>
-    </header>
+    </div>
+    <section class="provaider">
+      <ul class="provaider-ul">
+        <li class="provaider-ul__active">Consistent</li>
+        <li class="provaider-ul__list">Customer oriented</li>
+        <li class="provaider-ul__list">Innovative</li>
+        <li class="provaider-ul__list">Business oriented</li>
+      </ul>
+      <div class="provaider__flex">
+        <p class="provaider-ul__h1">We turn the idea of legal services</p>
+        <p class="provaider-ul__text">
+          Consolidating many years of experience and practice, the company's
+          lawyers accompany complex projects and achieve a number of important
+          decisions for the industry. Many of them form the practice of applying
+          the law of the sea in Ukraine.
+        </p>
+      </div>
+    </section>
     <article class="servises-cards">
       <p class="servises-cards__header">What can we do better than others?</p>
-      <div class="servises-cards__all">
-        <img src="../img/Ecommerce.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">IT and e-commerce</p>
-        <p class="servises-cards__text-basic">
-          An endless stream of contracts, tax issues, labor relations, corporate
-          papers - legal work distracts you from doing business. But there is
-          not much work to do to hire an in-house lawyer.
-        </p>
-      </div>
-      <div class="servises-cards__all">
-        <img src="../img/Support.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">
-          Comprehensive daily legal support
-        </p>
-        <p class="servises-cards__text-basic">
-          In addition, over time, the work will become the same type and
-          uninteresting for a full-time lawyer. And we know very well how
-          difficult it is to find a good candidate with experience in the field
-          of information technology in Ukraine.
-        </p>
-      </div>
-      <div class="servises-cards__all-soft">
-        <img src="../img/Coprorate.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">
-          Structuring corporate relationships
-        </p>
-        <p class="servises-cards__text-basic">
-          Instead of just providing legal services, we will hire a lawyer or a
-          whole team that will fit into the daily life of your company.
-        </p>
-      </div>
-      <div class="servises-cards__all-soft">
-        <img src="../img/Trust.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">
-          Building contractual relations
-        </p>
-        <p class="servises-cards__text-basic">
-          Once a week, or week after month, you have your own lawyer by your
-          side. Anyone in the company can catch it at the coffee maker and just
-          talk about current affairs instead of waiting for update status.
-        </p>
-      </div>
-      <div class="servises-cards__all-soft">
-        <img src="../img/Court.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">
-          Protection of business, intellectual property
-        </p>
-        <p class="servises-cards__text-basic">
-          And all the other time he will work on new diverse projects, so he
-          will definitely not stop in professional development. One way or
-          another, all Axon Partners will work for you instead of a corporate
-          lawyer.
-        </p>
-      </div>
-      <div class="servises-cards__soft">
-        <img src="../img/Ecommerce.svg" class="servises-cards__svg" />
-        <p class="servises-cards__text-regular">Judicial representation/p></p>
-        <p class="servises-cards__text-basic">
-          Is it a small, medium-sized company or a market leader? Local business
-          or multinational company? Do you have your own legal department or
-          not?
-        </p>
+      <div class="servises-cards__flex">
+        <div class="servises-cards__all">
+          <img src="../img/Ecommerce.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">IT and e-commerce</p>
+          <p class="servises-cards__text-basic">
+            An endless stream of contracts, tax issues, labor relations,
+            corporate papers - legal work distracts you from doing business. But
+            there is not much work to do to hire an in-house lawyer.
+          </p>
+        </div>
+        <div class="servises-cards__all">
+          <img src="../img/Support.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">
+            Comprehensive daily legal support
+          </p>
+          <p class="servises-cards__text-basic">
+            In addition, over time, the work will become the same type and
+            uninteresting for a full-time lawyer. And we know very well how
+            difficult it is to find a good candidate with experience in the
+            field of information technology in Ukraine.
+          </p>
+        </div>
+        <div class="servises-cards__all">
+          <img src="../img/Coprorate.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">
+            Structuring corporate relationships
+          </p>
+          <p class="servises-cards__text-basic">
+            Instead of just providing legal services, we will hire a lawyer or a
+            whole team that will fit into the daily life of your company.
+          </p>
+        </div>
+        <div class="servises-cards__all">
+          <img src="../img/Trust.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">
+            Building contractual relations
+          </p>
+          <p class="servises-cards__text-basic">
+            Once a week, or week after month, you have your own lawyer by your
+            side. Anyone in the company can catch it at the coffee maker and
+            just talk about current affairs instead of waiting for update
+            status.
+          </p>
+        </div>
+        <div class="servises-cards__all">
+          <img src="../img/Court.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">
+            Protection of business, intellectual property
+          </p>
+          <p class="servises-cards__text-basic">
+            And all the other time he will work on new diverse projects, so he
+            will definitely not stop in professional development. One way or
+            another, all Axon Partners will work for you instead of a corporate
+            lawyer.
+          </p>
+        </div>
+        <div class="servises-cards__all">
+          <img src="../img/Ecommerce.svg" class="servises-cards__svg" />
+          <p class="servises-cards__text-regular">Judicial representation/p></p>
+          <p class="servises-cards__text-basic">
+            Is it a small, medium-sized company or a market leader? Local
+            business or multinational company? Do you have your own legal
+            department or not?
+          </p>
+        </div>
       </div>
     </article>
     <div class="border-radius">
@@ -113,17 +213,22 @@
       <div class="border-radius__light"></div>
     </div>
     <article class="about-team">
-      <img src="../img/team2.png" class="about-team__image" />
-      <div class="about-team__text">
-        <p class="about-team__regular">
-          команда <img src="../img/Arrow.svg" />
-        </p>
-        <p class="about-team__red-text">
-          Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
-          вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-        </p>
-        <p class="about-team__name">Олександр <br />Олександровський</p>
-        <p class="about-team__role">Керуючий партнер</p>
+      <div class="about-team__flex">
+        <img src="../img/team2.png" class="about-team__image" />
+        <div class="about-team__text">
+          <p class="about-team__regular">
+            команда <img src="../img/Arrow.svg" />
+          </p>
+          <p class="about-team__red-text">
+            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
+            вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+          </p>
+          <div class="firslastname">
+            <span class="about-team__name">Олександр </span>
+            <span class="about-team__name">Олександровський</span>
+            <p class="about-team__role">Керуючий партнер</p>
+          </div>
+        </div>
       </div>
       <div class="ellipse">
         <svg
@@ -157,82 +262,130 @@
     </article>
     <div class="clients">
       <p class="clients__text">They already trust us</p>
-      <img src="../img/clients1.png" class="clients__hillel" />
-      <img src="../img/clients2.png" class="clients__wannabiz" />
-      <img src="../img/clients3.png" class="clients__tapgerine" />
-      <img src="../img/clients4.png" class="clients__3dlook" />
-      <img src="../img/clients5.png" class="clients__arangear" />
-      <img src="../img/clients6.png" class="clients__adtelligent" />
+      <div class="clients__logos">
+        <div class="clients__padding1">
+          <img src="../img/logo.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding2">
+          <img src="../img/logo2.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding3">
+          <img src="../img/logo4.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding4">
+          <img src="../img/logo12.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding5">
+          <img src="../img/logo13.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding6">
+          <img src="../img/logo11.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding7">
+          <img src="../img/logo7.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding8">
+          <img src="../img/logo8.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding9">
+          <img src="../img/logo5.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding10">
+          <img src="../img/logo6.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding11">
+          <img src="../img/logo9.png" class="clients__photo" />
+        </div>
+        <div class="clients__padding12">
+          <img src="../img/logo10.png" class="clients__photo" />
+        </div>
+      </div>
     </div>
     <article class="publications">
       <div class="publications__text-header">
         <h3 class="publications__text-img">
           Publications <img src="../img/Arrow.svg" />
         </h3>
-        <p class="publications__text-gradient">
-          We have <br />something to tell
-        </p>
+        <p class="publications__text-gradient">We have something to tell</p>
       </div>
-      <img src="../img/publicatin1.png" class="publications__image" />
-      <div class="publications__Equity-associate">
-        <p class="publications__text">Equity associate</p>
-        <p class="publications__date">April 22</p>
-        <p class="publications__info">
-          I'm a jun on projects. I am a co-owner of a law firm. How it happened.
-          Before entering my parents told me that if I…
-        </p>
-      </div>
-      <img src="../img/publicatin2.png" class="publications__image" />
-      <div class="publications__Equity-associate">
-        <p class="publications__text">
-          Penalty for the Good Corporation: what will happen to Google and
-          others for violating the GDPR
-        </p>
-        <p class="publications__date">September 29</p>
-        <p class="publications__info">
-          And why the recovery of 50 million euros could be a fateful precedent
-          According to Mind.ua January 21 National Commission for Data
-          Protection.
-        </p>
-      </div>
-      <img src="../img/publicatin3.png" class="publications__image" />
-      <div class="publications__Equity-associate">
-        <p class="publications__text">Millennial Testament</p>
-        <p class="publications__date">August 19</p>
-        <p class="publications__info">
-          What and how modern vloggers, opinion leaders and crypto-millionaires
-          will inherit A typical legacy of the Ukrainian generation X looks like
-          this: an apartment in…
-        </p>
+      <div class="publications__card">
+        <div class="publications__first">
+          <img src="../img/publicatin1.png" class="publications__image" />
+          <div class="publications__text1">
+            <p class="publications__text">Equity associate</p>
+            <p class="publications__date">April 22</p>
+            <p class="publications__info">
+              I'm a jun on projects. I am a co-owner of a law firm. How it
+              happened. Before entering my parents told me that if I…
+            </p>
+          </div>
+        </div>
+        <div class="publications__first">
+          <img src="../img/publicatin2.png" class="publications__image" />
+          <div class="publications__text2">
+            <p class="publications__text">
+              Penalty for the Good Corporation: what will happen to Google and
+              others for violating the GDPR
+            </p>
+            <p class="publications__date">September 29</p>
+            <p class="publications__info">
+              And why the recovery of 50 million euros could be a fateful
+              precedent According to Mind.ua January 21 National Commission for
+              Data Protection.
+            </p>
+          </div>
+        </div>
+        <div class="publications__first">
+          <img src="../img/publicatin3.png" class="publications__image2" />
+          <div class="publications__text3">
+            <p class="publications__text">Millennial Testament</p>
+            <p class="publications__date">August 19</p>
+            <p class="publications__info">
+              What and how modern vloggers, opinion leaders and
+              crypto-millionaires will inherit A typical legacy of the Ukrainian
+              generation X looks like this: an apartment in…
+            </p>
+          </div>
+        </div>
       </div>
     </article>
     <footer class="information">
-      <p class="information__street">Kyiv, Mechnikova str., 14/1</p>
-      <p class="information__map">On map</p>
-      <button class="information__facebook">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="38"
-          height="38"
-          viewBox="0 0 38 38"
-          fill="none"
-        >
-          <g clip-path="url(#clip0_189579_3277)">
-            <path
-              d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
-              fill="#24A3FF"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_189579_3277">
-              <rect width="38" height="38" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
-      </button>
-      <p class="information__phone">0800 211 927</p>
-      <p class="information__email">contact@forstudy.space</p>
+      <div>
+        <div class="information__footer">
+          <p class="information__street">Kyiv, Mechnikova str., 14/1</p>
+          <img src="../img/Dot separator.svg" class="img-dot" />
+          <p class="information__map">On map</p>
+        </div>
+        <div class="information__footer">
+          <button class="information__facebook">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_189579_3277)">
+                <path
+                  d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                  fill="#24A3FF"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_189579_3277">
+                  <rect width="38" height="38" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <img src="../img/Dot separator.svg" class="img-dot" />
+          <p class="information__phone">0800 211 927</p>
+          <img src="../img/Dot separator.svg" class="img-dot" />
+          <p class="information__email">contact@forstudy.space</p>
+        </div>
+      </div>
       <p class="information__hlegal">© 2021 HLEGAL Law company, LLC</p>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>

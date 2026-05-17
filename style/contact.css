@@ -2,10 +2,14 @@
   border: none;
   background-color: #f5f5fa;
   padding: 7px;
+  border-radius: 8px;
   font-family: "Mont Bold";
   font-size: 12px;
   line-height: normal;
   color: #b3b3ba;
+}
+.language__btn:hover:not(.language__btn--active):hover {
+  background-color: #e6e6f0;
 }
 .language__btn--active {
   font-family: "Mont Bold";
@@ -16,6 +20,112 @@
   border-radius: 8px;
   background: #f0145a;
   border: none;
+}
+
+.hamburg:active {
+  background: #e6e6f0;
+  border-radius: 8px;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #24a3ff;
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #f0145a;
+}
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
+}
+
+.text-contact {
+  font-family: "Mont Regular";
+  font-size: 20px;
+  line-height: normal;
+  color: #323264;
 }
 
 .number {
@@ -32,14 +142,50 @@
 }
 
 .burger-menu_hlegal {
-  padding: 0 15px;
   display: flex;
-  align-items: center;
+  align-items: normal;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
-  margin-bottom: 30px;
+  padding: 0 15px;
+}
+.burger-menu_hlegal__active {
+  display: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
+  background-color: #fff;
+  border: #fff;
+  border-bottom: 2px solid #f0145a;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__active:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+}
+.burger-menu_hlegal__btn {
+  display: none;
+  border: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__btn:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
+}
+
+.tablet-hd {
+  display: none;
 }
 
 .contacts {
@@ -51,6 +197,16 @@
   flex-wrap: nowrap;
   gap: 0;
   background-color: #f5f5fa;
+}
+.contacts__street {
+  display: none;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+.contacts__dot {
+  display: none;
 }
 
 .text-team {
@@ -76,6 +232,10 @@
   background-color: #fff;
 }
 
+.img-dot {
+  display: none;
+}
+
 .information {
   display: flex;
   align-items: center;
@@ -88,23 +248,20 @@
   margin-top: 30px;
 }
 .information__street {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #323264;
-  padding-bottom: 10px;
 }
 .information__map {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 12px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 21px;
   text-transform: uppercase;
 }
 .information__facebook {
   background-color: #f5f5fa;
-  padding-bottom: 10px;
   border: none;
 }
 .information__phone {
@@ -112,27 +269,48 @@
   font-size: 16px;
   line-height: normal;
   color: #46466e;
-  padding-bottom: 10px;
 }
 .information__email {
   font-family: "Mont Bold";
   font-size: 16px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 30px;
 }
 .information__hlegal {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
+}
+.information__footer {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.street-only {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
 }
 
 .contact-us {
   padding: 0 30px;
 }
+.contact-us__only {
+  font-family: "Mont Regular";
+  font-size: 21px;
+  line-height: 30px;
+  color: #323264;
+}
 .contact-us__street {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 21px;
   line-height: 30px;
   color: #323264;
@@ -140,7 +318,7 @@
 }
 .contact-us__phone {
   border-top: 4px solid #e6e6f0;
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 21px;
   line-height: 20px;
   color: #323264;
@@ -149,16 +327,23 @@
 }
 .contact-us__email {
   border-bottom: 4px solid #e6e6f0;
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 21px;
   line-height: 30px;
   color: #24a3ff;
   padding-bottom: 30px;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+.contact-us__email:hover {
+  font-family: "Mont Regular";
+  font-size: 21px;
+  line-height: 30px;
+  color: #f0145a;
 }
 .contact-us__facebook {
-  padding: 30px 0;
   display: flex;
-  align-items: normal;
+  align-items: center;
   justify-content: normal;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -171,6 +356,29 @@
   color: #24a3ff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.3s;
+  text-align: left;
+}
+.contact-us__facebook svg path {
+  transition: fill 0.3s;
+}
+.contact-us__facebook:hover {
+  font-family: "Mont Bold";
+  font-size: 12px;
+  line-height: 16px;
+  color: #f0145a;
+}
+.contact-us__facebook:hover:hover svg path {
+  fill: #f0145a;
+}
+
+.inside {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
 }
 
 .support {
@@ -183,6 +391,7 @@
   padding: 30px;
   background-color: #f5f5fa;
   border-radius: 12px;
+  margin-top: 30px;
 }
 .support__text {
   font-family: "Mont Bold";
@@ -209,13 +418,13 @@
   border-radius: 10px;
 }
 .support__name::-moz-placeholder {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: 26px;
   color: #b3b3ba;
 }
 .support__name::placeholder {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: 26px;
   color: #b3b3ba;
@@ -227,15 +436,17 @@
   border-radius: 10px;
   margin-bottom: 30px;
   height: 130px;
+  resize: none;
+  overflow: hidden;
 }
 .support__message::-moz-placeholder {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: 26px;
   color: #b3b3ba;
 }
 .support__message::placeholder {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: 26px;
   color: #b3b3ba;
@@ -267,4 +478,200 @@
   background: var(--Active-Regular, #24a3ff);
   box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
   margin-top: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.support__btn:hover {
+  background: #0085ff;
+}
+.support__btn:active {
+  border-radius: 12px;
+  background: #006ccf;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-sml {
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .contacts__street {
+    display: block;
+  }
+  .contacts__dot {
+    display: block;
+  }
+  .contacts .text-contact {
+    font-family: "Mont Regular";
+    font-size: 36px;
+    line-height: normal;
+    color: #323264;
+  }
+  .language__btn {
+    border: none;
+    background-color: #fff;
+    padding: 7px;
+    font-family: "Mont Bold";
+    font-size: 12px;
+    line-height: normal;
+    color: #b3b3ba;
+  }
+  .language__btn--active {
+    font-family: "Mont Bold";
+    font-size: 12px;
+    line-height: normal;
+    color: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    background: #f0145a;
+    border: none;
+  }
+  .burger-menu_hlegal {
+    padding: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .burger-menu_hlegal {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .burger-menu_hlegal__buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  .burger-menu_hlegal__active {
+    display: block;
+  }
+  .burger-menu_hlegal__btn {
+    display: block;
+  }
+  .text-contact {
+    font-family: "Mont Regular";
+    font-size: 36px;
+    line-height: normal;
+    color: #323264;
+  }
+  .contact-us {
+    padding: 0 60px;
+    margin-top: 30px;
+  }
+  .hlegalsvg {
+    padding: 0;
+  }
+  .img-dot {
+    display: block;
+  }
+  .information__footer {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .logologo {
+    width: 130px;
+  }
+  .slash {
+    width: 21px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+  .tablet-hd {
+    display: block;
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .tablet-hd__btn {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .burger-menu_hlegal__buttons {
+    display: flex;
+    align-items: normal;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .contact-us {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 60px;
+    margin: 60px 0;
+  }
+  .contact-us__basic-info {
+    width: 422px;
+  }
+  .information {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact-us {
+    padding: 0 180px;
+  }
+  .contact-us__basic-info {
+    width: 510px;
+  }
+  .support {
+    width: 510px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tablet-hd {
+    padding: 0 160px;
+  }
+  .contact-us {
+    padding: 0 280px;
+  }
+  .contact-us__basic-info {
+    width: 650px;
+  }
+  .support {
+    width: 650px;
+  }
 }/*# sourceMappingURL=contact.css.map */

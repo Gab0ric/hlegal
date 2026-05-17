@@ -5,6 +5,85 @@
   padding: 10px 15px;
   @include mixins.flex(normal, space-between);
   background-color: colors.$Grey-Bg;
+  &__street {
+    display: none;
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+
+  &__dot {
+    display: none;
+  }
+}
+
+.hamburg {
+  &:active {
+    background: colors.$Grey-Separator;
+    border-radius: 8px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  @include mixins.flex(end, center);
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  @include mixins.flex(normal, normal, column, 15px);
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  @include mixins.text-bold(24px, normal, colors.$Active-Regular);
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  @include mixins.text-bold(24px, normal, colors.$Accent);
 }
 
 .language {
@@ -12,7 +91,12 @@
     border: none;
     background-color: colors.$Grey-Bg;
     padding: 7px;
+    border-radius: 8px;
     @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &:hover:not(.language__btn--active):hover {
+      background-color: colors.$Grey-Separator;
+    }
 
     &--active {
       @include mixins.text-bold(12px, normal, colors.$Basic-White);
@@ -24,15 +108,57 @@
   }
 }
 
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .number {
   @include mixins.flex(center, normal);
   @include mixins.text-bold(12px, normal, colors.$Grey-Text);
 }
 
+.tablet-hd {
+  display: none;
+}
+
 .burger-menu_hlegal {
+  @include mixins.flex(normal, space-between, row, 0);
   padding: 0 15px;
-  @include mixins.flex(center, space-between);
-  margin-bottom: 30px;
+
+  &__active {
+    display: none;
+    @include mixins.text-bold(16px, normal, colors.$Accent);
+    background-color: colors.$Basic-White;
+    border: colors.$Basic-White;
+    border-bottom: 2px solid colors.$Accent;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    }
+  }
+
+  &__btn {
+    display: none;
+    border: none;
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    background-color: colors.$Basic-White;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
+  }
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
 }
 
 .text-team {
@@ -56,6 +182,7 @@
 }
 
 .gradient {
+  margin-top: 30px;
   @include mixins.text-bold(30px, normal, b);
   background: var(
     --Gradient-Red-Text,
@@ -71,15 +198,15 @@
 }
 
 .team-card__more {
-  @include mixins.flex(start, normal);
+  @include mixins.flex(normal, normal);
   border: none;
   background-color: colors.$Basic-White;
-  max-width: 32px;
-  transform: rotate(45deg);
+  width: 32px;
   transition: 0.3s;
 
   &:hover {
-    transform: rotate(0deg);
+    content: url("../img/More.svg");
+    transform: rotate(-90deg);
   }
 }
 
@@ -104,6 +231,10 @@
   }
 }
 
+.img-dot {
+  display: none;
+}
+
 .information {
   @include mixins.flex(center, center, column);
   background-color: colors.$Grey-Bg;
@@ -111,32 +242,206 @@
 
   &__street {
     @include mixins.text-regular(16px, normal, colors.$Main-Regular);
-    padding-bottom: 10px;
   }
 
   &__map {
     @include mixins.text-regular(12px, normal, colors.$Active-Regular);
-    padding-bottom: 21px;
     text-transform: uppercase;
   }
 
   &__facebook {
     background-color: colors.$Grey-Bg;
-    padding-bottom: 10px;
     border: none;
   }
 
   &__phone {
     @include mixins.text-bold(16px, normal, colors.$Main-Alt);
-    padding-bottom: 10px;
   }
 
   &__email {
     @include mixins.text-bold(16px, normal, colors.$Active-Regular);
-    padding-bottom: 30px;
   }
 
   &__hlegal {
     @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+
+  &__footer {
+    @include mixins.flex(center, normal, column);
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .team-card__image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text-team {
+    @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+  }
+
+  .contacts {
+    @include mixins.flex(center, normal, row, 6px);
+    background-color: colors.$Basic-White;
+
+    &__street {
+      display: block;
+    }
+
+    &__dot {
+      display: block;
+    }
+  }
+
+  .logologo {
+    width: 130px;
+  }
+
+  .slash {
+    width: 21px;
+  }
+
+  .text-team {
+    @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+  }
+
+  .language {
+    &__btn {
+      border: none;
+      background-color: colors.$Basic-White;
+      padding: 7px;
+      @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+      &--active {
+        @include mixins.text-bold(12px, normal, colors.$Basic-White);
+        padding: 6px;
+        border-radius: 8px;
+        background: colors.$Accent;
+        border: none;
+      }
+    }
+  }
+
+  .mobile-sml {
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .team-info {
+    @include mixins.flex(normal, center, row, 60px, wrap);
+    padding: 0 60px;
+  }
+
+  .team-card {
+    @include mixins.flex(normal, normal, column);
+  }
+  .team-card__image {
+    width: 294px;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .responsibility {
+    padding: 0 60px;
+    margin: 60px 0;
+  }
+
+  .burger-menu_hlegal {
+    @include mixins.flex(normal, normal, column);
+
+    &__buttons {
+      margin-top: 30px;
+      @include mixins.flex(normal, normal, row, 15px);
+    }
+
+    &__active {
+      display: block;
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+
+  .gradient {
+    margin-top: 60px;
+  }
+
+  .img-dot {
+    display: block;
+  }
+
+  .information {
+    &__footer {
+      @include mixins.flex(center, normal, row, 10px);
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+
+  .tablet-hd {
+    display: block;
+    @include mixins.flex(normal, space-between, row);
+    padding: 0 60px;
+    margin-top: 50px;
+
+    &__btn {
+      @include mixins.flex(center, normal, row, 10px);
+    }
+  }
+
+  .burger-menu_hlegal__buttons {
+    @include mixins.flex(normal, end, row, 15px);
+    margin-top: 15px;
+  }
+
+  .team-card__image {
+    width: 261px;
+  }
+
+  .responsibility {
+    padding: 0 180px;
+  }
+
+  .information {
+    @include mixins.flex(start, space-between, row);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .team-card__image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .team-card__image {
+    width: 493px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .tablet-hd {
+    padding: 0 160px;
+  }
+
+  .team-info {
+    padding: 0 160px;
   }
 }

@@ -8,15 +8,114 @@
   gap: 0;
   background-color: #f5f5fa;
 }
+.contacts__street {
+  display: none;
+  font-family: "Mont Regular";
+  font-size: 16px;
+  line-height: normal;
+  color: #b3b3ba;
+}
+.contacts__dot {
+  display: none;
+}
+
+.hamburg:active {
+  background: #e6e6f0;
+  border-radius: 8px;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #24a3ff;
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #f0145a;
+}
 
 .language__btn {
   border: none;
   background-color: #f5f5fa;
   padding: 7px;
+  border-radius: 8px;
   font-family: "Mont Bold";
   font-size: 12px;
   line-height: normal;
   color: #b3b3ba;
+}
+.language__btn:hover:not(.language__btn--active):hover {
+  background-color: #e6e6f0;
 }
 .language__btn--active {
   font-family: "Mont Bold";
@@ -27,6 +126,12 @@
   border-radius: 8px;
   background: #f0145a;
   border: none;
+}
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .number {
@@ -42,15 +147,59 @@
   color: #b3b3ba;
 }
 
+.tablet-hd {
+  display: none;
+}
+
 .burger-menu_hlegal {
-  padding: 0 15px;
   display: flex;
-  align-items: center;
+  align-items: normal;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
-  margin-bottom: 30px;
+  padding: 0 15px;
+}
+.burger-menu_hlegal__active {
+  display: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
+  background-color: #fff;
+  border: #fff;
+  border-bottom: 2px solid #f0145a;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__active:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+}
+.burger-menu_hlegal__btn {
+  display: none;
+  border: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__btn:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
 }
 
 .text-team {
@@ -82,6 +231,7 @@
 }
 
 .gradient {
+  margin-top: 30px;
   font-family: "Mont Bold";
   font-size: 30px;
   line-height: normal;
@@ -98,19 +248,19 @@
 
 .team-card__more {
   display: flex;
-  align-items: start;
+  align-items: normal;
   justify-content: normal;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
   border: none;
   background-color: #fff;
-  max-width: 32px;
-  transform: rotate(45deg);
+  width: 32px;
   transition: 0.3s;
 }
 .team-card__more:hover {
-  transform: rotate(0deg);
+  content: url("../img/More.svg");
+  transform: rotate(-90deg);
 }
 
 .team-card__image {
@@ -134,10 +284,14 @@
   color: #323264;
 }
 .team-card__role {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 14px;
   line-height: 22px;
   color: #b3b3ba;
+}
+
+.img-dot {
+  display: none;
 }
 
 .information {
@@ -151,23 +305,20 @@
   padding: 30px;
 }
 .information__street {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #323264;
-  padding-bottom: 10px;
 }
 .information__map {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 12px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 21px;
   text-transform: uppercase;
 }
 .information__facebook {
   background-color: #f5f5fa;
-  padding-bottom: 10px;
   border: none;
 }
 .information__phone {
@@ -175,18 +326,228 @@
   font-size: 16px;
   line-height: normal;
   color: #46466e;
-  padding-bottom: 10px;
 }
 .information__email {
   font-family: "Mont Bold";
   font-size: 16px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 30px;
 }
 .information__hlegal {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
+}
+.information__footer {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 375px) {
+  .team-card__image {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text-team {
+    font-family: "Mont Regular";
+    font-size: 36px;
+    line-height: normal;
+    color: #323264;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    background-color: #fff;
+  }
+  .contacts__street {
+    display: block;
+  }
+  .contacts__dot {
+    display: block;
+  }
+  .logologo {
+    width: 130px;
+  }
+  .slash {
+    width: 21px;
+  }
+  .text-team {
+    font-family: "Mont Regular";
+    font-size: 36px;
+    line-height: normal;
+    color: #323264;
+  }
+  .language__btn {
+    border: none;
+    background-color: #fff;
+    padding: 7px;
+    font-family: "Mont Bold";
+    font-size: 12px;
+    line-height: normal;
+    color: #b3b3ba;
+  }
+  .language__btn--active {
+    font-family: "Mont Bold";
+    font-size: 12px;
+    line-height: normal;
+    color: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    background: #f0145a;
+    border: none;
+  }
+  .mobile-sml {
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .menu {
+    display: none;
+  }
+  .team-info {
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 0 60px;
+  }
+  .team-card {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .team-card__image {
+    width: 294px;
+    display: block;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 12px;
+  }
+  .responsibility {
+    padding: 0 60px;
+    margin: 60px 0;
+  }
+  .burger-menu_hlegal {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .burger-menu_hlegal__buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  .burger-menu_hlegal__active {
+    display: block;
+  }
+  .burger-menu_hlegal__btn {
+    display: block;
+  }
+  .gradient {
+    margin-top: 60px;
+  }
+  .img-dot {
+    display: block;
+  }
+  .information__footer {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+  .tablet-hd {
+    display: block;
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .tablet-hd__btn {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .burger-menu_hlegal__buttons {
+    display: flex;
+    align-items: normal;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .team-card__image {
+    width: 261px;
+  }
+  .responsibility {
+    padding: 0 180px;
+  }
+  .information {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .team-card__image {
+    width: 400px;
+    height: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .team-card__image {
+    width: 493px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .tablet-hd {
+    padding: 0 160px;
+  }
+  .team-info {
+    padding: 0 160px;
+  }
 }/*# sourceMappingURL=team.css.map */

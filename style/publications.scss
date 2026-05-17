@@ -6,7 +6,12 @@
     border: none;
     background-color: colors.$Grey-Bg;
     padding: 7px;
+    border-radius: 8px;
     @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &:hover:not(.language__btn--active):hover {
+      background-color: colors.$Grey-Separator;
+    }
 
     &--active {
       @include mixins.text-bold(12px, normal, colors.$Basic-White);
@@ -18,21 +23,141 @@
   }
 }
 
+.hamburg {
+  &:active {
+    background: colors.$Grey-Separator;
+    border-radius: 8px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  @include mixins.flex(end, center);
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  @include mixins.flex(normal, normal, column, 15px);
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  @include mixins.text-bold(24px, normal, colors.$Active-Regular);
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  @include mixins.text-bold(24px, normal, colors.$Accent);
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
+}
+
+.text-publications {
+  @include mixins.text-regular(20px, normal, colors.$Main-Regular);
+}
+
+.tablet-hd {
+  display: none;
+}
+
 .number {
   @include mixins.flex(center, normal);
   @include mixins.text-bold(12px, normal, colors.$Grey-Text);
 }
 
 .burger-menu_hlegal {
+  @include mixins.flex(normal, space-between, row, 0);
   padding: 0 15px;
-  @include mixins.flex(center, space-between);
-  margin-bottom: 30px;
+
+  &__active {
+    display: none;
+    @include mixins.text-bold(16px, normal, colors.$Accent);
+    background-color: colors.$Basic-White;
+    border: colors.$Basic-White;
+    border-bottom: 2px solid colors.$Accent;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    }
+  }
+
+  &__btn {
+    display: none;
+    border: none;
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    background-color: colors.$Basic-White;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
+  }
 }
 
 .contacts {
   padding: 10px 15px;
   @include mixins.flex(normal, space-between);
   background-color: colors.$Grey-Bg;
+
+  &__street {
+    display: none;
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+
+  &__dot {
+    display: none;
+  }
 }
 
 .text-team {
@@ -50,37 +175,37 @@
   background-color: colors.$Basic-White;
 }
 
+.img-dot {
+  display: none;
+}
+
 .information {
   @include mixins.flex(center, center, column);
-  background-color: colors.$Grey-Bg;
-  padding: 30px;
   border-top: 4px solid colors.$Grey-Separator;
+  background-color: colors.$Grey-Bg;
+  padding-top: 30px;
+  padding: 30px;
 
   &__street {
     @include mixins.text-regular(16px, normal, colors.$Main-Regular);
-    padding-bottom: 10px;
   }
 
   &__map {
     @include mixins.text-regular(12px, normal, colors.$Active-Regular);
-    padding-bottom: 21px;
     text-transform: uppercase;
   }
 
   &__facebook {
     background-color: colors.$Grey-Bg;
-    padding-bottom: 10px;
     border: none;
   }
 
   &__phone {
     @include mixins.text-bold(16px, normal, colors.$Main-Alt);
-    padding-bottom: 10px;
   }
 
   &__email {
     @include mixins.text-bold(16px, normal, colors.$Active-Regular);
-    padding-bottom: 30px;
   }
 
   &__hlegal {
@@ -91,7 +216,20 @@
 .publications {
   padding: 30px;
   background-color: colors.$Grey-Bg;
-  @include mixins.flex(normal, normal, column);
+
+  &__card {
+    @include mixins.flex(normal, space-between, column, 30px);
+  }
+
+  &__first {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__for-btn {
+    @include mixins.flex(start, center);
+    padding-bottom: 30px;
+  }
 
   &__btn {
     @include mixins.text-bold(16px, normal, colors.$Basic-White);
@@ -101,16 +239,49 @@
     padding: 18px 30px;
     margin-top: 30px;
     border: none;
+    transition: 0.3s;
+
+    &:hover {
+      background: colors.$active-hover;
+    }
+
+    &:active {
+      border-radius: 12px;
+      background: colors.$active-active;
+    }
   }
 
   &__image {
-    max-width: 100%;
+    width: 260px;
     border-radius: 12px 12px 0 0;
   }
 
-  &__Equity-associate {
+  &__text1 {
+    padding: 30px 30px 110px 30px;
+    background-color: colors.$Basic-White;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__text2 {
     padding: 30px;
-    margin-bottom: 30px;
+    background-color: colors.$Basic-White;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__text3 {
+    padding: 30px 30px 71px 30px;
+    background-color: colors.$Basic-White;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__text4 {
+    padding: 30px;
+    background-color: colors.$Basic-White;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__text5 {
+    padding: 30px;
     background-color: colors.$Basic-White;
     border-radius: 0 0 12px 12px;
   }
@@ -124,6 +295,11 @@
   &__text {
     @include mixins.text-bold(16px, normal, colors.$Active-Regular);
     margin-bottom: 15px;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
   }
 
   &__date {
@@ -138,27 +314,345 @@
   }
 }
 
-.swapbox {
-  padding: 2px;
-  background-color: colors.$Grey-Separator;
-  border-radius: 10px;
-  @include mixins.flex(normal, center, row, 2px);
-  margin-bottom: 30px;
+.swap {
+  @include mixins.flex(normal, center, row);
+  padding: 30px 0;
+
+  &__box {
+    @include mixins.flex(normal, center);
+    background-color: colors.$Grey-Separator;
+    border-radius: 12px;
+    padding: 2px;
+    gap: 2px;
+  }
+
+  &__active {
+    @include mixins.text-bold(16px, normal, colors.$Main-Regular);
+    @include mixins.flex(start, normal, row);
+    background-color: colors.$Basic-White;
+    padding: 8px 30px 10px 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+  }
 
   &__btn {
-    padding: 8px 50px 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent;
     @include mixins.text-bold(16px, normal, colors.$Main-Regular);
-    transition: 0.5s;
+    @include mixins.flex(start, normal, row);
+    background-color: colors.$Grey-Separator;
+    padding: 8px 30px 10px 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    border: none;
 
     &:hover {
-      background-color: colors.$Grey-Bg;
+      background: colors.$Grey-Bg;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .publications {
+    &__image {
+      width: 314px;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .publications {
+    &__image {
+      width: 365px;
+    }
+  }
+}
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-sml {
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+
+  .contacts {
+    @include mixins.flex(center, normal, row, 6px);
+    background-color: colors.$Basic-White;
+    padding: 0;
+    margin-bottom: 30px;
+
+    &__street {
+      display: block;
+    }
+
+    &__dot {
+      display: block;
+    }
+    .text-contact {
+      @include mixins.text-regular(36px, normal, colors.$Main-Regular);
     }
   }
 
-  &__btn--active {
-    background-color: colors.$Basic-White;
+  .language {
+    &__btn {
+      border: none;
+      background-color: colors.$Basic-White;
+      padding: 7px;
+      @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+      &--active {
+        @include mixins.text-bold(12px, normal, colors.$Basic-White);
+        padding: 6px;
+        border-radius: 8px;
+        background: colors.$Accent;
+        border: none;
+      }
+    }
+  }
+
+  .burger-menu_hlegal {
+    padding: 0;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .burger-menu_hlegal {
+    @include mixins.flex(normal, normal, column);
+
+    &__buttons {
+      margin-top: 30px;
+      @include mixins.flex(normal, normal, row, 15px);
+    }
+
+    &__active {
+      display: block;
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+
+  .text-contact {
+    @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+  }
+
+  .contact-us {
+    padding: 0 60px;
+    margin-top: 30px;
+  }
+
+  .hlegalsvg {
+    padding: 0;
+  }
+
+  .img-dot {
+    display: block;
+  }
+
+  .information {
+    &__footer {
+      @include mixins.flex(center, normal, row, 6px);
+      margin-bottom: 20px;
+    }
+  }
+
+  .logologo {
+    width: 130px;
+  }
+
+  .slash {
+    width: 21px;
+  }
+
+  .publications {
+    padding: 0 60px;
+    margin-top: 60px;
+    &__card {
+      @include mixins.flex(normal, space-between, row, 30px, wrap);
+    }
+
+    &__image {
+      width: 309px;
+    }
+    &__text1 {
+      width: 309px;
+    }
+
+    &__text2 {
+      width: 309px;
+    }
+
+    &__text3 {
+      width: 309px;
+    }
+
+    &__text4 {
+      width: 309px;
+    }
+
+    &__text5 {
+      width: 309px;
+    }
+
+    &__last-card {
+      width: 309px;
+    }
+
+    &__btn {
+      margin-top: 30px;
+    }
+  }
+
+  .text-publications {
+    @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+
+  .tablet-hd {
+    display: block;
+    @include mixins.flex(normal, space-between, row);
+    padding: 0 60px;
+    margin-top: 50px;
+
+    &__btn {
+      @include mixins.flex(center, normal, row, 10px);
+    }
+  }
+
+  .burger-menu_hlegal__buttons {
+    @include mixins.flex(normal, end, row, 15px);
+    margin-top: 15px;
+  }
+
+  .publications {
+    &__image {
+      width: 281px;
+    }
+
+    &__text1 {
+      width: 281px;
+      padding-bottom: 151px;
+    }
+
+    &__text2 {
+      width: 281px;
+    }
+
+    &__text3 {
+      width: 281px;
+      padding-bottom: 96px;
+    }
+
+    &__text4 {
+      width: 281px;
+      padding-bottom: 41px;
+    }
+
+    &__text5 {
+      width: 281px;
+    }
+
+    &__last-card {
+      width: 281px;
+    }
+  }
+
+  .information {
+    @include mixins.flex(start, space-between, row);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .publications {
+    &__image {
+      width: 420px;
+    }
+
+    &__text1 {
+      width: 420px;
+      padding-bottom: 151px;
+    }
+
+    &__text2 {
+      width: 420px;
+      padding-bottom: 90px;
+    }
+
+    &__text3 {
+      width: 420px;
+      padding-bottom: 112px;
+    }
+
+    &__text4 {
+      width: 420px;
+      padding-bottom: 77px;
+    }
+
+    &__text5 {
+      width: 420px;
+    }
+
+    &__last-card {
+      width: 420px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .tablet-hd {
+    padding: 0 160px;
+  }
+
+  .publications {
+    padding: 30px 160px;
+
+    &__image {
+      width: 513px;
+    }
+
+    &__text1 {
+      width: 513px;
+      padding-bottom: 153px;
+    }
+
+    &__text2 {
+      width: 513px;
+      padding-bottom: 136px;
+    }
+
+    &__text3 {
+      width: 513px;
+      padding-bottom: 112px;
+    }
+
+    &__text4 {
+      width: 513px;
+      padding-bottom: 86px;
+    }
+
+    &__text5 {
+      width: 513px;
+    }
+
+    &__last-card {
+      width: 513px;
+    }
+  }
+
+  .information {
+    padding: 30px 160px;
   }
 }

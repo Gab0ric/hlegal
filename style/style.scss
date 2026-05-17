@@ -5,13 +5,104 @@
   padding: 10px 15px;
   background-color: colors.$Grey-Bg;
   @include mixins.flex($jc: space-between, $ai: center);
+
+  &__street {
+    display: none;
+  }
+
+  &__dot {
+    display: none;
+  }
 }
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburg {
+  &:active {
+    background: colors.$Grey-Separator;
+    border-radius: 8px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  @include mixins.flex(end, center);
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  @include mixins.flex(normal, normal, column, 15px);
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  @include mixins.text-bold(24px, normal, colors.$Active-Regular);
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  @include mixins.text-bold(24px, normal, colors.$Accent);
+}
+
 .language {
   &__btn {
     border: none;
     background-color: colors.$Grey-Bg;
     padding: 7px;
+    border-radius: 8px;
     @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+
+    &:hover:not(.language__btn--active):hover {
+      background-color: colors.$Grey-Separator;
+    }
 
     &--active {
       @include mixins.text-bold(12px, normal, colors.$Basic-White);
@@ -23,6 +114,10 @@
   }
 }
 
+.tablet-hd {
+  display: none;
+}
+
 .number {
   @include mixins.flex(center, normal);
   @include mixins.text-bold(12px, normal, colors.$Grey-Text);
@@ -30,8 +125,32 @@
 
 .burger-menu_hlegal {
   padding: 0 15px;
-  @include mixins.flex(center, space-between);
-  margin-bottom: 30px;
+  @include mixins.flex(normal, space-between);
+
+  &__active {
+    display: none;
+    @include mixins.text-bold(16px, normal, colors.$Accent);
+    background-color: colors.$Basic-White;
+    border: colors.$Basic-White;
+    border-bottom: 2px solid colors.$Accent;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    }
+  }
+
+  &__btn {
+    display: none;
+    border: none;
+    @include mixins.text-bold(16px, normal, colors.$Active-Regular);
+    background-color: colors.$Basic-White;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
+  }
 }
 
 .text-about {
@@ -51,9 +170,9 @@
 
 .intro {
   padding: 0 30px 0 30px;
-  margin-bottom: 30px;
-
+  margin: 30px 0;
   &__gradient {
+    @include mixins.flex(normal, normal, row, 0);
     font-family: "Mont Bold";
     font-size: 30px;
     background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
@@ -61,24 +180,18 @@
     background-clip: text;
     color: #f0145a;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
   }
 
   &__info {
-    color: colors.$Basic-Black;
-    font-family: "Mont Regular";
-    font-size: 19px;
-    line-height: 30px; /* 157.895% */
+    @include mixins.text-regular(19px, 30px, colors.$Basic-Black);
     margin-bottom: 30px;
   }
 
-  &__years {
-    border-left: 4px solid colors.$Grey-Separator;
-  }
-
   &__svg {
-    margin-left: 30px;
-    @include mixins.flex(normal, normal, column, 8px, wrap);
+    border-left: 4px solid colors.$Grey-Separator;
+    padding-left: 30px;
+    @include mixins.flex(normal, normal, column, 40px, nowrap);
   }
 }
 
@@ -89,7 +202,12 @@
   background-repeat: no-repeat;
   width: 100%;
   @include mixins.text-bold(36px, normal, colors.$Basic-White);
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
   text-transform: uppercase;
+}
+
+.all-text-info {
+  @include mixins.flex(normal, normal, column, 10px);
 }
 
 .more {
@@ -97,7 +215,7 @@
 
   &__info {
     color: colors.$Basic-Black;
-    @include mixins.text-regular(19px, normal, colors.$Basic-Black);
+    @include mixins.text-regular(19px, 30px, colors.$Basic-Black);
 
     &__gradient {
       margin-top: 30px;
@@ -111,8 +229,11 @@
   }
 }
 
+.achievements__none {
+  display: none;
+}
+
 .achievements {
-  @include mixins.flex(center, center, column, 30px);
   padding: 30px 60px;
   background: colors.$Grey-Bg;
 
@@ -120,17 +241,24 @@
     @include mixins.text-bold(14px, normal, colors.$Main-Regular);
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 30px;
   }
 
   &__image {
+    @include mixins.flex(normal, center);
     padding: 25px 70px;
     border-radius: 12px;
     background: colors.$Basic-White;
   }
 
   &__circle {
-    @include mixins.flex(normal, normal, row, 14px);
+    margin-top: 30px;
+    @include mixins.flex(normal, center, row, 14px);
   }
+}
+
+.img-dot {
+  display: none;
 }
 
 .information {
@@ -139,34 +267,352 @@
   padding: 30px;
   border-top: 2px solid colors.$Grey-Separator;
 
+  &__footer {
+    @include mixins.flex(center, normal, column);
+    margin-bottom: 20px;
+  }
+
   &__street {
     @include mixins.text-regular(16px, normal, colors.$Main-Regular);
-    padding-bottom: 10px;
   }
 
   &__map {
     @include mixins.text-regular(12px, normal, colors.$Active-Regular);
-    padding-bottom: 21px;
     text-transform: uppercase;
   }
 
   &__facebook {
     background-color: colors.$Grey-Bg;
-    padding-bottom: 10px;
     border: none;
   }
 
   &__phone {
     @include mixins.text-bold(16px, normal, colors.$Main-Alt);
-    padding-bottom: 10px;
   }
 
   &__email {
     @include mixins.text-bold(16px, normal, colors.$Active-Regular);
-    padding-bottom: 30px;
   }
 
   &__hlegal {
     @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
+}
+
+@media screen and (min-width: 375px) {
+  .photo-teams__backgraund {
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    padding: 37px 135.5px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .photo-teams__backgraund {
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    padding: 47px 160.5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    @include mixins.flex(center, normal, row, 6px);
+    background: colors.$Basic-White;
+    padding: 0 60px;
+    margin-top: 50px;
+
+    &__street {
+      @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+      display: block;
+    }
+
+    &__dot {
+      display: block;
+    }
+  }
+
+  .burger-menu_hlegal {
+    @include mixins.flex(normal, normal, column);
+  }
+
+  .language {
+    &__btn {
+      background-color: colors.$Basic-White;
+
+      &--active {
+        @include mixins.text-bold(12px, normal, colors.$Basic-White);
+        padding: 6px;
+        border-radius: 8px;
+        background: colors.$Accent;
+        border: none;
+      }
+    }
+  }
+
+  .burger-menu_hlegal {
+    padding: 0 60px;
+  }
+
+  .text-about {
+    @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logologo {
+    width: 130px;
+  }
+
+  .slash {
+    width: 21px;
+  }
+
+  .intro {
+    padding: 0 60px;
+    margin-bottom: 60px;
+  }
+
+  .photo-teams__backgraund {
+    @include mixins.text-bold(46px, normal, colors.$Basic-White);
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 95px 220px;
+  }
+
+  .more {
+    padding: 60px;
+  }
+
+  .achievements {
+    &__image {
+      height: 90px;
+      padding: 24.4px 39px 25.6px 39px;
+      @include mixins.flex(center, center);
+    }
+
+    &__logo2 {
+      height: 90px;
+      padding: 24.4px 13px 25.6px 13px;
+      background-color: colors.$Basic-White;
+      border-radius: 12px;
+      @include mixins.flex(center, center);
+    }
+
+    &__logo3 {
+      height: 90px;
+      padding: 24.4px 1px 25.6px 1px;
+      background-color: colors.$Basic-White;
+      border-radius: 12px;
+      @include mixins.flex(center, center);
+    }
+
+    &__logo4 {
+      height: 90px;
+      padding: 24.4px 11px 25.6px 11px;
+      background-color: colors.$Basic-White;
+      border-radius: 12px;
+      @include mixins.flex(center, center);
+    }
+
+    &__cards {
+      @include mixins.flex(center, space-between, row, 0);
+    }
+  }
+
+  .achievements__none {
+    display: block;
+  }
+
+  .burger-menu_hlegal {
+    &__buttons {
+      margin-top: 30px;
+      @include mixins.flex(normal, normal, row, 15px);
+    }
+
+    &__active {
+      display: block;
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+
+  .img-dot {
+    display: block;
+    @include mixins.flex(center, normal);
+  }
+
+  .information {
+    &__footer {
+      @include mixins.flex(center, normal, row, 10px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+
+  .tablet-hd {
+    display: block;
+    @include mixins.flex(normal, space-between, row);
+    padding: 0 60px;
+    margin-top: 50px;
+
+    &__btn {
+      @include mixins.flex(center, end, row, 10px);
+      margin-bottom: 10px;
+    }
+  }
+
+  .burger-menu_hlegal {
+    &__buttons {
+      @include mixins.flex(center, end, row, 10px);
+    }
+  }
+
+  .achievements {
+    &__image {
+      height: 110px;
+      padding: 25px 58px;
+    }
+
+    &__logo2 {
+      height: 110px;
+      padding: 25px 19px;
+    }
+
+    &__logo3 {
+      height: 110px;
+      padding: 25px 1px;
+    }
+
+    &__logo4 {
+      height: 110px;
+      padding: 25px 15px;
+    }
+  }
+
+  .about-services {
+    max-width: 50%;
+    margin-right: 60px;
+  }
+
+  .intro {
+    @include mixins.flex(normal);
+    margin: 60px 0;
+
+    &__gradient {
+      margin-bottom: 28px;
+    }
+  }
+
+  .all-text-info {
+    max-width: 68%;
+  }
+
+  .more {
+    @include mixins.flex(normal);
+
+    &__info__gradient {
+      padding-left: 60px;
+      margin-top: 0;
+      max-width: 32%;
+    }
+  }
+
+  .img-dot {
+    display: block;
+    @include mixins.flex(center, normal);
+  }
+
+  .information {
+    @include mixins.flex(start, space-between, row);
+
+    &__footer {
+      @include mixins.flex(center, normal, row, 15px);
+    }
+  }
+
+  .photo-teams__backgraund {
+    @include mixins.text-bold(86px, normal, colors.$Basic-White);
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 103px 288px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .achievements {
+    &__image {
+      height: 110px;
+      padding: 25px 113px;
+    }
+
+    &__logo2 {
+      height: 110px;
+      padding: 25px 70px;
+    }
+
+    &__logo3 {
+      height: 110px;
+      padding: 25px 52px;
+    }
+
+    &__logo4 {
+      height: 110px;
+      padding: 25px 67px;
+    }
+  }
+
+  .photo-teams__backgraund {
+    @include mixins.text-bold(96px, normal, colors.$Basic-White);
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 163px 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .achievements {
+    &__image {
+      height: 110px;
+      padding: 25px 147px;
+    }
+
+    &__logo2 {
+      height: 110px;
+      padding: 25px 106px;
+    }
+
+    &__logo3 {
+      height: 110px;
+      padding: 25px 88px;
+    }
+
+    &__logo4 {
+      height: 110px;
+      padding: 25px 102px;
+    }
+  }
+
+  .photo-teams__backgraund {
+    @include mixins.text-bold(96px, normal, colors.$Basic-White);
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 236px 0;
+    text-align: center;
   }
 }

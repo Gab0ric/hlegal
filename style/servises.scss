@@ -6,7 +6,12 @@
     border: none;
     background-color: colors.$Main-Alt;
     padding: 7px;
-    @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+    border-radius: 8px;
+    @include mixins.text-bold(12px, normal, colors.$Basic-White);
+
+    &:hover:not(.language__btn--active):hover {
+      background-color: #ffffff40;
+    }
 
     &--active {
       @include mixins.text-bold(12px, normal, colors.$Basic-White);
@@ -18,21 +23,154 @@
   }
 }
 
+.hamburg {
+  &:active {
+    background: rgba(245, 245, 250, 0.2);
+    border-radius: 8px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  @include mixins.flex(end, center);
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  @include mixins.flex(normal, normal, column, 15px);
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  @include mixins.text-bold(24px, normal, colors.$Active-Regular);
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  @include mixins.text-bold(24px, normal, colors.$Accent);
+}
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
+}
+
+.tablet-hd {
+  display: none;
+}
+
 .number {
   @include mixins.flex(center, normal);
-  @include mixins.text-bold(12px, normal, colors.$Grey-Text);
+  @include mixins.text-bold(12px, normal, colors.$Basic-White);
 }
 
 .burger-menu_hlegal {
-  padding: 0 15px;
-  @include mixins.flex(center, space-between);
+  @include mixins.flex(normal, space-between, row, 0);
   background-color: colors.$Main-Regular;
+  padding: 0 15px;
+
+  &__active {
+    display: none;
+    @include mixins.text-bold(16px, normal, colors.$Basic-White);
+    background-color: colors.$Main-Regular;
+    border: colors.$Basic-White;
+    border-bottom: 2px solid colors.$Basic-White;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom: 2px solid colors.$Accent;
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
+  }
+
+  &__btn {
+    display: none;
+    border: none;
+    @include mixins.text-bold(16px, normal, colors.$Basic-White);
+    background-color: colors.$Main-Regular;
+    transition: 0.3s;
+
+    &:hover {
+      @include mixins.text-bold(16px, normal, colors.$Accent);
+    }
+  }
 }
 
 .contacts {
   padding: 10px 15px;
   @include mixins.flex(normal, space-between);
   background: colors.$Main-Alt;
+  transition: 0.3s;
+
+  &__facobook-hover {
+    display: none;
+  }
+
+  &__street {
+    display: none;
+    @include mixins.text-regular(16px, normal, colors.$Grey-Text);
+  }
+
+  &__dot {
+    display: none;
+  }
+}
+
+.img-dot {
+  display: none;
 }
 
 .text-team {
@@ -40,8 +178,8 @@
 }
 
 .hlegalsvg {
-  padding: 15px 0 10px 0;
   @include mixins.flex(start, normal, row, 4px);
+  padding: 10px 0 0 0;
 }
 
 .menu {
@@ -55,36 +193,40 @@
   background-color: colors.$Basic-White;
   padding: 30px;
 
+  &__footer {
+    @include mixins.flex(center, normal, column, 6px);
+    margin-bottom: 20px;
+  }
+
   &__street {
     @include mixins.text-regular(16px, normal, colors.$Main-Regular);
-    padding-bottom: 10px;
   }
 
   &__map {
     @include mixins.text-regular(12px, normal, colors.$Active-Regular);
-    padding-bottom: 21px;
     text-transform: uppercase;
   }
 
   &__facebook {
     background-color: colors.$Basic-White;
-    padding-bottom: 10px;
     border: none;
   }
 
   &__phone {
     @include mixins.text-bold(16px, normal, colors.$Main-Alt);
-    padding-bottom: 10px;
   }
 
   &__email {
     @include mixins.text-bold(16px, normal, colors.$Active-Regular);
-    padding-bottom: 30px;
   }
 
   &__hlegal {
     @include mixins.text-regular(16px, normal, colors.$Grey-Text);
   }
+}
+
+.text-services {
+  @include mixins.text-regular(20px, normal, colors.$Basic-White);
 }
 
 .servises-cards {
@@ -95,6 +237,10 @@
   );
   padding: 30px 30px 60px 30px;
   border-radius: 0 0 12px 12px;
+
+  &__flex {
+    @include mixins.flex(normal, normal, column, 30px);
+  }
 
   &__header {
     @include mixins.text-bold(30px, normal, b);
@@ -117,6 +263,12 @@
   &__text-regular {
     @include mixins.text-bold(22px, normal, colors.$Active-Regular);
     margin-bottom: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      @include mixins.text-bold(22px, normal, colors.$Accent);
+    }
   }
 
   &__text-basic {
@@ -145,47 +297,542 @@
 }
 
 .clients {
-  @include mixins.flex(center, center, column);
+  @include mixins.flex(normal, normal, column);
   margin: 30px 0 30px 0;
 
   &__text {
     @include mixins.text-bold(14px, normal, colors.$Main-Regular);
+    @include mixins.flex(normal, center);
     margin-bottom: 30px;
   }
 
-  &__hillel {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: #1c4280;
+  &__logos {
+    @include mixins.flex(normal, center, column);
   }
 
-  &__wannabiz {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: #143646;
+  &__padding1 {
+    @include mixins.flex(normal, center);
+    padding: 36px 79px;
+    background-color: #1c4280;
   }
 
-  &__tapgerine {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: linear-gradient(0deg, #f48b30 0%, #f48b30 100%), #f48b30;
+  &__padding2 {
+    @include mixins.flex(normal, center);
+    padding: 44px 86px;
+    background-color: #143646;
   }
 
-  &__3dlook {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: #9e4dc3;
+  &__padding3 {
+    @include mixins.flex(normal, center);
+    padding: 38px 98px;
+    background-color: #fd9339;
   }
 
-  &__arangear {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: #fd9339;
+  &__padding4 {
+    @include mixins.flex(normal, center);
+    padding: 39px 96px;
+    background-color: #9e4dc3;
   }
 
-  &__adtelligent {
-    max-width: 100%;
-    padding: 39px 90px;
-    background: #e2e2e4;
+  &__padding5 {
+    @include mixins.flex(normal, center);
+    padding: 38px 99px;
+    background-color: #fd9339;
+  }
+
+  &__padding6 {
+    @include mixins.flex(normal, center);
+    padding: 36px 90px;
+    background-color: #e2e2e4;
+  }
+
+  &__padding7 {
+    display: none;
+    background-color: #c71c36;
+  }
+
+  &__padding8 {
+    display: none;
+    background-color: #dcf3f9;
+  }
+
+  &__padding9 {
+    display: none;
+    background-color: #eaeaea;
+  }
+
+  &__padding10 {
+    display: none;
+    background-color: #282240;
+  }
+
+  &__padding11 {
+    display: none;
+    background-color: #1d4568;
+  }
+
+  &__padding12 {
+    display: none;
+    background-color: #000;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .border-radius {
+    @include mixins.flex(center, center, column);
+
+    &__dark {
+      width: 335px;
+    }
+
+    &__light {
+      width: 295px;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .border-radius {
+    @include mixins.flex(center, center, column);
+
+    &__dark {
+      width: 375px;
+    }
+
+    &__light {
+      width: 335px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-sml {
+    padding: 60px 60px 30px 60px;
+    background-color: colors.$Main-Regular;
+  }
+
+
+  .contacts {
+    @include mixins.flex(center, normal, row, 6px);
+    background-color: colors.$Main-Regular;
+    padding: 0;
+    margin-bottom: 30px;
+
+    &__facobook-hover {
+      display: block;
+    }
+
+    &__street {
+      display: block;
+    }
+
+    &__dot {
+      display: block;
+    }
+    .text-contact {
+      @include mixins.text-regular(36px, normal, colors.$Main-Regular);
+    }
+  }
+
+  .language {
+    &__btn {
+      border: none;
+      background-color: colors.$Main-Regular;
+      padding: 7px;
+      @include mixins.text-bold(12px, normal, colors.$Basic-White);
+
+      &--active {
+        @include mixins.text-bold(12px, normal, colors.$Basic-White);
+        padding: 6px;
+        border-radius: 8px;
+        background: colors.$Accent;
+        border: none;
+      }
+    }
+  }
+
+  .img-dot {
+    display: block;
+  }
+
+  .information {
+    &__footer {
+      @include mixins.flex(center, normal, row, 6px);
+      margin-bottom: 20px;
+    }
+  }
+
+  .hlegalsvg {
+    padding: 0;
+  }
+
+  .burger-menu_hlegal {
+    padding: 0;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .burger-menu_hlegal {
+    @include mixins.flex(normal, normal, column);
+
+    &__buttons {
+      margin-top: 30px;
+      @include mixins.flex(normal, normal, row, 15px);
+    }
+
+    &__active {
+      display: block;
+    }
+
+    &__btn {
+      display: block;
+    }
+  }
+
+  .clients {
+    &__logos {
+      @include mixins.flex(normal, center, row, 0, wrap);
+    }
+    &__padding1 {
+      padding: 36px 20px;
+      background-color: #1c4280;
+    }
+
+    &__padding2 {
+      padding: 44px 28px;
+      background-color: #143646;
+    }
+
+    &__padding3 {
+      padding: 38px 38px 38px 39px;
+      background-color: #fd9339;
+    }
+
+    &__padding4 {
+      padding: 39px 38px;
+      background-color: #9e4dc3;
+    }
+
+    &__padding5 {
+      padding: 38px 41px;
+      background-color: #fd9339;
+    }
+
+    &__padding6 {
+      padding: 36px 34px;
+      background-color: #e2e2e4;
+    }
+
+    &__padding7 {
+      display: block;
+      padding: 29px 59px;
+      background-color: #c71c36;
+    }
+
+    &__padding8 {
+      display: block;
+      padding: 22px 55px;
+      background-color: #dcf3f9;
+    }
+
+    &__padding9 {
+      display: block;
+      padding: 30px 37px;
+      background-color: #eaeaea;
+    }
+
+    &__padding10 {
+      display: block;
+      padding: 41px 37px;
+      background-color: #282240;
+    }
+
+    &__padding11 {
+      display: block;
+      padding: 37px 34px;
+      background-color: #1d4568;
+    }
+
+    &__padding12 {
+      display: block;
+      padding: 13px 52px;
+      background-color: #000;
+    }
+  }
+
+  .border-radius {
+    @include mixins.flex(center, center, column);
+
+    &__dark {
+      width: 728px;
+    }
+
+    &__light {
+      width: 688px;
+    }
+  }
+
+  .servises-cards {
+    padding: 30px 60px 60px 60px;
+    background: var(
+      --Gradient-Supersoft,
+      linear-gradient(245deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+    );
+
+    &__flex {
+      @include mixins.flex(normal, center, row, 60px, wrap);
+    }
+
+    &__all {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      max-width: 294px;
+    }
+  }
+  .logologo {
+    width: 130px;
+  }
+
+  .slash {
+    width: 21px;
+  }
+
+  .text-services {
+    @include mixins.text-regular(36px, normal, colors.$Basic-White);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .mobile-sml {
+      display: none;
+    }
+
+    .tablet-hd {
+      display: block;
+      @include mixins.flex(normal, space-between, row);
+      background-color: colors.$Main-Regular;
+      padding: 50px 60px 30px 60px;
+
+      &__btn {
+        @include mixins.flex(center, normal, row, 10px);
+      }
+    }
+
+    .servises-cards {
+      background: var(
+        --Gradient-Supersoft,
+        linear-gradient(226deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+      );
+      &__all {
+        max-width: 260px;
+      }
+    }
+
+    .border-radius {
+      @include mixins.flex(center, center, column);
+
+      &__dark {
+        width: 984px;
+      }
+
+      &__light {
+        width: 944px;
+      }
+    }
+    .information {
+      @include mixins.flex(start, space-between, row);
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .clients {
+      &__logos {
+        @include mixins.flex(normal, center, row, 0, wrap);
+      }
+      &__padding1 {
+        padding: 36px 71px 36px 72px;
+        background-color: #1c4280;
+      }
+
+      &__padding2 {
+        padding: 44px 80px 44px 81px;
+        background-color: #143646;
+      }
+
+      &__padding3 {
+        padding: 38px 90px 38px 91px;
+        background-color: #fd9339;
+      }
+
+      &__padding4 {
+        padding: 39px 90px;
+        background-color: #9e4dc3;
+      }
+
+      &__padding5 {
+        padding: 38px 93px;
+        background-color: #fd9339;
+      }
+
+      &__padding6 {
+        padding: 36px 86px;
+        background-color: #e2e2e4;
+      }
+
+      &__padding7 {
+        display: block;
+        padding: 29px 111px 30px;
+        background-color: #c71c36;
+      }
+
+      &__padding8 {
+        display: block;
+        padding: 22px 107px;
+        background-color: #dcf3f9;
+      }
+
+      &__padding9 {
+        display: block;
+        padding: 30px 89px;
+        background-color: #eaeaea;
+      }
+
+      &__padding10 {
+        display: block;
+        padding: 41px 89px 41px 90px;
+        background-color: #282240;
+      }
+
+      &__padding11 {
+        display: block;
+        padding: 37px 85px 37px 86px;
+        background-color: #1d4568;
+      }
+
+      &__padding12 {
+        display: block;
+        padding: 13px 104px 12px;
+        background-color: #000;
+      }
+    }
+
+    .servises-cards {
+      background: var(
+        --Gradient-Supersoft,
+        linear-gradient(216deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+      );
+      &__all {
+        max-width: 400px;
+      }
+    }
+
+    .border-radius {
+      @include mixins.flex(center, center, column);
+
+      &__dark {
+        width: 1400px;
+      }
+
+      &__light {
+        width: 1360px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .clients {
+      padding: 0 100px;
+
+      &__padding1 {
+        padding: 36px 106px 36px 107px;
+        background-color: #1c4280;
+      }
+
+      &__padding2 {
+        padding: 44px 108px;
+        background-color: #143646;
+      }
+
+      &__padding3 {
+        padding: 38px 125px 38px 126px;
+        background-color: #fd9339;
+      }
+
+      &__padding4 {
+        padding: 39px 125px;
+        background-color: #9e4dc3;
+      }
+
+      &__padding5 {
+        padding: 38px 128px;
+        background-color: #fd9339;
+      }
+
+      &__padding6 {
+        padding: 36px 114px;
+        background-color: #e2e2e4;
+      }
+
+      &__padding7 {
+        display: block;
+        padding: 29px 146px 30px;
+        background-color: #c71c36;
+      }
+
+      &__padding8 {
+        display: block;
+        padding: 22px 142px;
+        background-color: #dcf3f9;
+      }
+
+      &__padding9 {
+        display: block;
+        padding: 30px 124px;
+        background-color: #eaeaea;
+      }
+
+      &__padding10 {
+        display: block;
+        padding: 41px 117px;
+        background-color: #282240;
+      }
+
+      &__padding11 {
+        display: block;
+        padding: 37px 120px 37px 121px;
+        background-color: #1d4568;
+      }
+
+      &__padding12 {
+        display: block;
+        padding: 13px 139px 12px;
+        background-color: #000;
+      }
+    }
+
+    .servises-cards {
+      padding: 60px 160px;
+      background: var(
+        --Gradient-Supersoft,
+        linear-gradient(216deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%)
+      );
+      &__all {
+        max-width: 493px;
+      }
+    }
+
+    .border-radius {
+      @include mixins.flex(center, center, column);
+
+      &__dark {
+        width: 1880px;
+      }
+
+      &__light {
+        width: 1840px;
+      }
+    }
   }
 }

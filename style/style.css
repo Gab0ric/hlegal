@@ -8,15 +8,116 @@
   flex-wrap: nowrap;
   gap: 0;
 }
+.contacts__street {
+  display: none;
+}
+.contacts__dot {
+  display: none;
+}
+
+.a-logo {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburg:active {
+  background: #e6e6f0;
+  border-radius: 8px;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  background: #626297;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 9px;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 359px;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  position: relative;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links a {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 12px;
+  background: #f5f5fa;
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #24a3ff;
+  text-decoration: none;
+}
+
+.menu-links a:hover {
+  background: #ededf7;
+}
+
+.menu-links a.active {
+  font-family: "Mont Bold";
+  font-size: 24px;
+  line-height: normal;
+  color: #f0145a;
+}
 
 .language__btn {
   border: none;
   background-color: #f5f5fa;
   padding: 7px;
+  border-radius: 8px;
   font-family: "Mont Bold";
   font-size: 12px;
   line-height: normal;
   color: #b3b3ba;
+}
+.language__btn:hover:not(.language__btn--active):hover {
+  background-color: #e6e6f0;
 }
 .language__btn--active {
   font-family: "Mont Bold";
@@ -27,6 +128,10 @@
   border-radius: 8px;
   background: #f0145a;
   border: none;
+}
+
+.tablet-hd {
+  display: none;
 }
 
 .number {
@@ -45,12 +150,44 @@
 .burger-menu_hlegal {
   padding: 0 15px;
   display: flex;
-  align-items: center;
+  align-items: normal;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 0;
-  margin-bottom: 30px;
+}
+.burger-menu_hlegal__active {
+  display: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
+  background-color: #fff;
+  border: #fff;
+  border-bottom: 2px solid #f0145a;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__active:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+}
+.burger-menu_hlegal__btn {
+  display: none;
+  border: none;
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #24a3ff;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.burger-menu_hlegal__btn:hover {
+  font-family: "Mont Bold";
+  font-size: 16px;
+  line-height: normal;
+  color: #f0145a;
 }
 
 .text-about {
@@ -78,9 +215,15 @@
 
 .intro {
   padding: 0 30px 0 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 .intro__gradient {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
   font-family: "Mont Bold";
   font-size: 30px;
   background: linear-gradient(90deg, #f0145a 0%, #ef8080 100%);
@@ -88,26 +231,24 @@
   background-clip: text;
   color: #f0145a;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 .intro__info {
-  color: rgba(0, 0, 0, 0.9450980392);
   font-family: "Mont Regular";
   font-size: 19px;
-  line-height: 30px; /* 157.895% */
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.9450980392);
   margin-bottom: 30px;
 }
-.intro__years {
-  border-left: 4px solid #e6e6f0;
-}
 .intro__svg {
-  margin-left: 30px;
+  border-left: 4px solid #e6e6f0;
+  padding-left: 30px;
   display: flex;
   align-items: normal;
   justify-content: normal;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 40px;
 }
 
 .photo-teams__backgraund {
@@ -120,7 +261,17 @@
   font-size: 36px;
   line-height: normal;
   color: #fff;
+  text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
   text-transform: uppercase;
+}
+
+.all-text-info {
+  display: flex;
+  align-items: normal;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .more {
@@ -128,9 +279,9 @@
 }
 .more__info {
   color: rgba(0, 0, 0, 0.9450980392);
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 19px;
-  line-height: normal;
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.9450980392);
 }
 .more__info__gradient {
@@ -146,13 +297,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.achievements__none {
+  display: none;
+}
+
 .achievements {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 30px;
   padding: 30px 60px;
   background: #f5f5fa;
 }
@@ -163,19 +312,31 @@
   color: #323264;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .achievements__image {
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
   padding: 25px 70px;
   border-radius: 12px;
   background: #fff;
 }
 .achievements__circle {
+  margin-top: 30px;
   display: flex;
   align-items: normal;
-  justify-content: normal;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 14px;
+}
+
+.img-dot {
+  display: none;
 }
 
 .information {
@@ -189,24 +350,30 @@
   padding: 30px;
   border-top: 2px solid #e6e6f0;
 }
+.information__footer {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-bottom: 20px;
+}
 .information__street {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #323264;
-  padding-bottom: 10px;
 }
 .information__map {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 12px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 21px;
   text-transform: uppercase;
 }
 .information__facebook {
   background-color: #f5f5fa;
-  padding-bottom: 10px;
   border: none;
 }
 .information__phone {
@@ -214,18 +381,375 @@
   font-size: 16px;
   line-height: normal;
   color: #46466e;
-  padding-bottom: 10px;
 }
 .information__email {
   font-family: "Mont Bold";
   font-size: 16px;
   line-height: normal;
   color: #24a3ff;
-  padding-bottom: 30px;
 }
 .information__hlegal {
-  font-family: " Mont Regular";
+  font-family: "Mont Regular";
   font-size: 16px;
   line-height: normal;
   color: #b3b3ba;
+}
+
+.logologo {
+  width: 70px;
+}
+
+.slash {
+  width: 11px;
+}
+
+@media screen and (min-width: 375px) {
+  .photo-teams__backgraund {
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    padding: 37px 135.5px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .photo-teams__backgraund {
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    padding: 47px 160.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    background: #fff;
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .contacts__street {
+    font-family: "Mont Regular";
+    font-size: 16px;
+    line-height: normal;
+    color: #b3b3ba;
+    display: block;
+  }
+  .contacts__dot {
+    display: block;
+  }
+  .burger-menu_hlegal {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .language__btn {
+    background-color: #fff;
+  }
+  .language__btn--active {
+    font-family: "Mont Bold";
+    font-size: 12px;
+    line-height: normal;
+    color: #fff;
+    padding: 6px;
+    border-radius: 8px;
+    background: #f0145a;
+    border: none;
+  }
+  .burger-menu_hlegal {
+    padding: 0 60px;
+  }
+  .text-about {
+    font-family: "Mont Regular";
+    font-size: 36px;
+    line-height: normal;
+    color: #323264;
+  }
+  .menu {
+    display: none;
+  }
+  .logologo {
+    width: 130px;
+  }
+  .slash {
+    width: 21px;
+  }
+  .intro {
+    padding: 0 60px;
+    margin-bottom: 60px;
+  }
+  .photo-teams__backgraund {
+    font-family: "Mont Bold";
+    font-size: 46px;
+    line-height: normal;
+    color: #fff;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 95px 220px;
+  }
+  .more {
+    padding: 60px;
+  }
+  .achievements__image {
+    height: 90px;
+    padding: 24.4px 39px 25.6px 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .achievements__logo2 {
+    height: 90px;
+    padding: 24.4px 13px 25.6px 13px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .achievements__logo3 {
+    height: 90px;
+    padding: 24.4px 1px 25.6px 1px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .achievements__logo4 {
+    height: 90px;
+    padding: 24.4px 11px 25.6px 11px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .achievements__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .achievements__none {
+    display: block;
+  }
+  .burger-menu_hlegal__buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  .burger-menu_hlegal__active {
+    display: block;
+  }
+  .burger-menu_hlegal__btn {
+    display: block;
+  }
+  .img-dot {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .information__footer {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mobile-sml {
+    display: none;
+  }
+  .tablet-hd {
+    display: block;
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+  .tablet-hd__btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .burger-menu_hlegal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .achievements__image {
+    height: 110px;
+    padding: 25px 58px;
+  }
+  .achievements__logo2 {
+    height: 110px;
+    padding: 25px 19px;
+  }
+  .achievements__logo3 {
+    height: 110px;
+    padding: 25px 1px;
+  }
+  .achievements__logo4 {
+    height: 110px;
+    padding: 25px 15px;
+  }
+  .about-services {
+    max-width: 50%;
+    margin-right: 60px;
+  }
+  .intro {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 60px 0;
+  }
+  .intro__gradient {
+    margin-bottom: 28px;
+  }
+  .all-text-info {
+    max-width: 68%;
+  }
+  .more {
+    display: flex;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .more__info__gradient {
+    padding-left: 60px;
+    margin-top: 0;
+    max-width: 32%;
+  }
+  .img-dot {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .information {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .information__footer {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  .photo-teams__backgraund {
+    font-family: "Mont Bold";
+    font-size: 86px;
+    line-height: normal;
+    color: #fff;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 103px 288px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .achievements__image {
+    height: 110px;
+    padding: 25px 113px;
+  }
+  .achievements__logo2 {
+    height: 110px;
+    padding: 25px 70px;
+  }
+  .achievements__logo3 {
+    height: 110px;
+    padding: 25px 52px;
+  }
+  .achievements__logo4 {
+    height: 110px;
+    padding: 25px 67px;
+  }
+  .photo-teams__backgraund {
+    font-family: "Mont Bold";
+    font-size: 96px;
+    line-height: normal;
+    color: #fff;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 163px 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .achievements__image {
+    height: 110px;
+    padding: 25px 147px;
+  }
+  .achievements__logo2 {
+    height: 110px;
+    padding: 25px 106px;
+  }
+  .achievements__logo3 {
+    height: 110px;
+    padding: 25px 88px;
+  }
+  .achievements__logo4 {
+    height: 110px;
+    padding: 25px 102px;
+  }
+  .photo-teams__backgraund {
+    font-family: "Mont Bold";
+    font-size: 96px;
+    line-height: normal;
+    color: #fff;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    letter-spacing: 63px;
+    padding: 236px 0;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
